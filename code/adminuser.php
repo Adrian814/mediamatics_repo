@@ -44,8 +44,8 @@ session_start();
         }
         if($_SESSION["nick"] == "Admin") {
             
-    $db = mysql_connect("localhost", "siudaa", "saihiechoo3E") or die(mysql_error());
-    mysql_select_db("proj2009-siudaa", $db) or die(mysql_error());
+    $db = mysql_connect("localhost", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
+    mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
     //$db = mysql_connect('localhost', 'phpmyadmin', 'mausfalle');
 
     if (!$db) {
@@ -53,7 +53,7 @@ session_start();
         exit;
     }
 
-    $mysql = mysql_select_db('proj2009-siudaa');
+    $mysql = mysql_select_db('db_6b0d5c75');
     if(!$mysql) {
         echo 'Cannot select database.';
         exit;
