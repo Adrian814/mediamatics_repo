@@ -13,7 +13,7 @@ session_start();
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender", "css/web_tech.css");
+            $design->createHeader("Demo Kalender!", "css/web_tech.css");
 
             if(isset($_POST["createEvent_form"]))
             {
