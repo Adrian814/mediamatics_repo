@@ -34,7 +34,7 @@ session_start();
                 <div id="content">
                     <?php
                     echo "<br>";
-                $db = mysql_connect("localhost", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
+                $db = mysql_connect("user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
         mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
                 //$db = mysql_connect('localhost', 'phpmyadmin', 'mausfalle');
 
