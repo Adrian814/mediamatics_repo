@@ -200,6 +200,10 @@ session_start();
     echo "
    
         <table>
+        <td>
+        	Test
+		</td>
+        <td>
             <tr>
 	            <b><a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a><b>
             </tr>
@@ -209,7 +213,9 @@ session_start();
                     <br><a class='adi' href='"."EventProfile.php?EventId=".$row['EventId']."'style='font-style:italic;'> more...<a>
                 </td>
             </tr>
-            <br>
+            <br><br>
+		</td>
+
     ";
     }
     }
