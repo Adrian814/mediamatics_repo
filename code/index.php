@@ -194,9 +194,10 @@ session_start();
         $Description = substr($row['Description'], 0, 200);
 
 // action='index.php?Order=$Order&Page=$Page&Total=$Total'
-
+ //<form method='post'>
+ //</form>
     echo "
-    <form method='post'>
+   
         <table>
             <tr>
 	            <a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>"
@@ -215,7 +216,7 @@ session_start();
     }
     echo "
         </table>
-    </form>
+ 
     ";
     
     ?>
