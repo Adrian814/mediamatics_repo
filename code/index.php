@@ -185,8 +185,8 @@ session_start();
 */
 
     // generates the list of events
-	$result = 'SELECT * FROM `Events` ORDER BY `Date` ASC';
-    //$result = mysql_query($query);
+	$query = 'SELECT * FROM `Events` ORDER BY `Date` ASC';
+    $result = mysql_query($query);
     if ($result) {
     	$num_results = mysql_num_rows($result);
     for ($i=0; $i < $num_results; $i++) {
