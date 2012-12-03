@@ -34,7 +34,9 @@ session_start();
             		$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
    					mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
 
-				    $dateSelected = 0;
+				    $postingdateSelected = 0;
+					$titleSelected = 0;
+					$categorySelected = 0;
 				    $Seite = 0;
 
 				    if (!$db) {
@@ -61,26 +63,26 @@ session_start();
 
     // prepares the query for the order of the list
     if (isset($_GET['Order'])) {
-        if (($_GET['Order']) == "Date") {
-            $query = 'SELECT * FROM `Events` ORDER BY `Date` ASC';
-            $dateSelected="selected";
-            $Order="Date";
+        if (($_GET['Order']) == "Postingdate") {
+            $query = 'SELECT * FROM `Events` ORDER BY `Postingdate` ASC';
+            $postingdateSelected="selected";
+            $Order="Postingdate";
         }
-        elseif (($_GET['Order']) == "Points") {
-        $query = 'SELECT * FROM `Events` ORDER BY `Points` DESC';
-        $pointsSelected="selected";
-        $Order="Points";
+        elseif (($_GET['Order']) == "Title") {
+        $query = 'SELECT * FROM `Events` ORDER BY `Title` DESC';
+        $titleSelected="selected";
+        $Order="Title";
         }
-        elseif (($_GET['Order']) == "Participants") {
-        $query = 'SELECT * FROM `Events`ORDER BY `Participants` DESC';
-        $participantsSelected="selected";
-        $Order="Participants";
+        elseif (($_GET['Order']) == "Category") {
+        $query = 'SELECT * FROM `Events`ORDER BY `Category` DESC';
+        $categorySelected="selected";
+        $Order="Category";
         }
     }
     else {
-        $query = 'SELECT * FROM `Events` ORDER BY `Date` ASC';
-        $dateSelected="selected";
-        $Order="Date";
+        $query = 'SELECT * FROM `Events` ORDER BY `Postingdate` ASC';
+        $postingdateSelected="selected";
+        $Order="Postingdate";
     }
     
     // page navigation
@@ -171,9 +173,9 @@ session_start();
         <form action='index.php' method='get'>
             <label for='Order'>Sort by:</label>
                         <select type='submit' name='Order' size='1' OnChange ='submit()'>
-                            <option $dateSelected>Postingdate</option>
-                            <option $pointsSelected>Title</option>
-                            <option $participantsSelected>Category</option>
+                            <option $postingdateSelected>Postingdate</option>
+                            <option $titleSelected>Title</option>
+                            <option $categorySelected>Category</option>
                         </select>
         </form>
     </td>
@@ -182,6 +184,7 @@ session_start();
     </td>
     </table>
     ";
+
 
     // generates the list of events
 	$query = 'SELECT * FROM `Events` ORDER BY `Postingdate` ASC';
