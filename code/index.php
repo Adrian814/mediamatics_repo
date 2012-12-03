@@ -201,7 +201,7 @@ session_start();
    
         <table>
             <tr>
-	            <a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a>
+	            <b><a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a><b>
             </tr>
             <tr>
                 <td colspan='2', rowspan='2' valign='top' id='event_descr'>
