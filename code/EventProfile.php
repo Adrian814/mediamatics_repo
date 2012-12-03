@@ -84,7 +84,7 @@
 	                    </tr>
 	                    <tr>
 	                        <td style='font-weight:bold'>E-Mail</td>
-	                        <td>".$row['Issue']."</td>
+	                        <td>".$row['E-Mail']."</td>
 	                    </tr>
 	                    <tr>
 	                        <td style='font-weight:bold'>Postingdate</td>
