@@ -185,7 +185,7 @@ session_start();
 */
 
     // generates the list of events
-	$query = 'SELECT * FROM `Events` ORDER BY `Date` ASC';
+	$query = 'SELECT * FROM `Events` ORDER BY `Title` ASC';
     $result = mysql_query($query);
     if ($result) {
     	$num_results = mysql_num_rows($result);
@@ -200,9 +200,7 @@ session_start();
    
         <table>
             <tr>
-	            <a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>"
-	            .$row['Title']
-	            ." [".$row['Category']."]: </a>
+	            <a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a>
             </tr>
             <tr>
                 <td colspan='2', rowspan='2' valign='top' id='event_descr'>
