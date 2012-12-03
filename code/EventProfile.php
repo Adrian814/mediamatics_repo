@@ -43,6 +43,7 @@
 	            $row = mysql_fetch_array($result);
           
 	            echo "<h2>".$row['Title']."</h2>";
+	
 	            echo "
 	                <table border='0' cellpadding ='5' width='60%'>
 	                    <colgroup>
