@@ -58,7 +58,7 @@ session_start();
 				            }
 				        }
 				    }
-
+/*
     // prepares the query for the order of the list
     if (isset($_GET['Order'])) {
         if (($_GET['Order']) == "Date") {
@@ -153,6 +153,7 @@ session_start();
         $SkipCharactersFront = '... ';
     if ($Page + $NumericLinks < $PageNumber)
         $SkipCharactersBack = ' ...';
+*/
 
     $Nav = $BeginningLink;
     $Nav .= $BackLink;
@@ -162,6 +163,7 @@ session_start();
     $Nav .= $ContinueLink;
     $Nav .= $EndLink;
     
+/*
     //select menu for order             
     echo "
     <table width='100%'>
@@ -180,6 +182,7 @@ session_start();
     </td>
     </table>
     ";
+*/
 
     // generates the list of events
     $result = mysql_query($query);
