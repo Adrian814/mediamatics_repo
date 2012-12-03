@@ -153,7 +153,7 @@ session_start();
         $SkipCharactersFront = '... ';
     if ($Page + $NumericLinks < $PageNumber)
         $SkipCharactersBack = ' ...';
-*/
+
 
     $Nav = $BeginningLink;
     $Nav .= $BackLink;
@@ -163,7 +163,7 @@ session_start();
     $Nav .= $ContinueLink;
     $Nav .= $EndLink;
     
-/*
+
     //select menu for order             
     echo "
     <table width='100%'>
