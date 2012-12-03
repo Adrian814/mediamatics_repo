@@ -58,7 +58,7 @@ session_start();
 				            }
 				        }
 				    }
-/*
+
     // prepares the query for the order of the list
     if (isset($_GET['Order'])) {
         if (($_GET['Order']) == "Date") {
@@ -171,9 +171,9 @@ session_start();
         <form action='index.php' method='get'>
             <label for='Order'>Sort by:</label>
                         <select type='submit' name='Order' size='1' OnChange ='submit()'>
-                            <option $dateSelected>Date</option>
-                            <option $pointsSelected>Points</option>
-                            <option $participantsSelected>Participants</option>
+                            <option $dateSelected>Postingdate</option>
+                            <option $pointsSelected>Title</option>
+                            <option $participantsSelected>Category</option>
                         </select>
         </form>
     </td>
@@ -182,11 +182,9 @@ session_start();
     </td>
     </table>
     ";
-*/
 
     // generates the list of events
-	$query = 'SELECT * FROM `Events`'; 
-	// ORDER BY `Title` ASC';
+	$query = 'SELECT * FROM `Events` ORDER BY `Postingdate` ASC';
     $result = mysql_query($query);
     if ($result) {
     	$num_results = mysql_num_rows($result);
@@ -194,36 +192,28 @@ session_start();
         $row = mysql_fetch_array($result);
         $Description = substr($row['Description'], 0, 200);
 
-// action='index.php?Order=$Order&Page=$Page&Total=$Total'
- //<form method='post'>
- //</form>
     echo "
-   
-        <table>
-        <td>
-        	Test
-		</td>
-        <td>
-            <tr>
-	            <b><a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a><b>
-            </tr>
-            <tr>
-                <td colspan='2', rowspan='2' valign='top' id='event_descr'>
-                    $Description
-                    <br><a class='adi' href='"."EventProfile.php?EventId=".$row['EventId']."'style='font-style:italic;'> more...<a>
-                </td>
-            </tr>
-            <br><br>
-		</td>
-
+		<form action='index.php?Order=$Order&Page=$Page&Total=$Total' method='post'>
+       	 	<table>
+		        <td>
+		            <tr>
+			            <b><a href=EventProfile.php?EventId=". $row['EventId'] ." class='adi'>".$row['Title']." [".$row['Category']."]: </a><b>
+		            </tr>
+		            <tr>
+		                <td colspan='2', rowspan='2' valign='top' id='event_descr'>
+		                    $Description
+		                    <br><a class='adi' href='"."EventProfile.php?EventId=".$row['EventId']."'style='font-style:italic;'> more...<a>
+		                </td>
+		            </tr>
+		            <br>
+				</td>
     ";
     }
     }
     echo "
-        </table>
- 
+        	</table>
+		</form>
     ";
-    
     ?>
     </div>
     <div id="calendar">
