@@ -193,8 +193,9 @@ session_start();
         $row = mysql_fetch_array($result);
         $Description = substr($row['Description'], 0, 200);
 
+// action='index.php?Order=$Order&Page=$Page&Total=$Total'
+
     echo "
-action='index.php?Order=$Order&Page=$Page&Total=$Total'
     <form method='post'>
         <table>
             <tr>
