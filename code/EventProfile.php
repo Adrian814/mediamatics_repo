@@ -91,7 +91,7 @@
 	                        <td>" .date('d.m.o', strtotime($row['Postingdate'])). "</td>
 	                    </tr>
 						<tr>
-	                        <td style='font-weight:bold'>Picture</td>
+	                        <td valign='top' style='font-weight:bold'>Picture</td>
 	                        <td>"."<img src='".$row['Picture']."'></td>
 	                    </tr>
 	                </table>";
