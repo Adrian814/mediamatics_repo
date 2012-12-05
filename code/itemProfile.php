@@ -113,6 +113,7 @@
 					            mysql_query($query);
 					        }
 					    }
+						echo "<hr>";
 /*
 					    $query = "SELECT * FROM `Comments` WHERE ItemId = $ItemId";
 					    $result = mysql_query($query);
