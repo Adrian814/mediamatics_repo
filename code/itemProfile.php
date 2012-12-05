@@ -36,7 +36,7 @@
 						        }
 						    }
 						}
-			      /*
+			      
 			  		    // reads the informations of an event from the database and fills a html table
 			 	        $query = "SELECT * FROM `Items` WHERE ItemId = $ItemId";
 				        $result = mysql_query($query);
@@ -100,7 +100,7 @@
 				        }
 
 				        echo "<hr>";
-   					
+   					/*
 					    // makes a list of comments and a comment field for new comments for logged in users
 					    echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
 
