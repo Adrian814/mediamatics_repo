@@ -204,8 +204,6 @@
 					         ";
 					     }
 					}
-					
-					echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
 
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
