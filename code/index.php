@@ -55,8 +55,8 @@ session_start();
 					        if($_SESSION["nick"] == "Admin") {
 					            if (isset($_POST['DeleteItem'])) {
 					                $itemId = $_POST['DeleteItem'];
-					                mysql_query("DELETE FROM `Items` WHERE itemId = \"$itemId\"");
-					                mysql_query("DELETE FROM `Comments` WHERE itemId = \"$itemId\"");
+					                mysql_query("DELETE FROM `Items` WHERE ItemId = \"$ItemId\"");
+					                mysql_query("DELETE FROM `Comments` WHERE ItemId = \"$ItemId\"");
 					            }
 					        }
 					    }
