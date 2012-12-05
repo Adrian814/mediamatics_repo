@@ -23,11 +23,11 @@
 		    <div id="body">
 		        <div id="content"> 
 			        <?php
-			/*
+			
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
-
-						//checks the user rights
+/*
+						//Admin: delete comments 
 						if (isset($_SESSION['nick'])) {
 						    if ($_SESSION['nick'] == 'Admin') {
 						        if (isset($_POST['DeleteComment'])) {
