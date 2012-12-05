@@ -26,7 +26,7 @@
 			
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
-/*
+
 						//Admin: delete comments 
 						if (isset($_SESSION['nick'])) {
 						    if ($_SESSION['nick'] == 'Admin') {
@@ -98,7 +98,7 @@
 				                    </tr>
 				                </table>";
 				        }
-*/
+/*
 				        echo "<hr>";
    						
 					    // makes a list of comments and a comment field for new comments for logged in users
@@ -205,7 +205,7 @@
 					         ";
 					     }
 					}
-
+*/
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
 					    if($_SESSION["nick"] == "Admin") {
