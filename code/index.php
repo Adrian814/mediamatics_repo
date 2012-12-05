@@ -85,25 +85,6 @@ session_start();
 							$Order = 'Postingdate';
 					    }
     
-					    //select menu for order             
-					    echo "
-						    <table width='100%'>
-							    <td>
-							        <form action='index.php' method='get'>
-							            <label for='Order'>Sort by:</label>
-							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-							                            <option $postingdateSelected>Postingdate</option>
-							                            <option $titleSelected>Title</option>
-							                            <option $categorySelected>Category</option>
-							                        </select>
-							        </form>
-							    </td>
-							    <td>
-							        <p align='right'>$Nav<p>
-							    </td>
-						    </table>
-						";
-
 					    // page navigation
 					    if (!isset($_REQUEST['Total'])) {
 					        $result = mysql_query($query);
@@ -175,13 +156,32 @@ session_start();
 					    if ($Page + $NumericLinks < $PageNumber)
 					        $SkipCharactersBack = ' ...';
 
-					    $Nav .= $BeginningLink;
+					    $Nav = $BeginningLink;
 					    $Nav .= $BackLink;
 					    $Nav .= $SkipCharactersFront;
 					    $Nav .= $ViewableLinks;
 					    $Nav .= $SkipCharactersBack;
 					    $Nav .= $ContinueLink;
 					    $Nav .= $EndLink;
+					
+					    //select menu for order             
+					    echo "
+						    <table width='100%'>
+							    <td>
+							        <form action='index.php' method='get'>
+							            <label for='Order'>Sort by:</label>
+							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
+							                            <option $postingdateSelected>Postingdate</option>
+							                            <option $titleSelected>Title</option>
+							                            <option $categorySelected>Category</option>
+							                        </select>
+							        </form>
+							    </td>
+							    <td>
+							        <p align='right'>$Nav<p>
+							    </td>
+						    </table>
+						";
     
 					    // generates the list of events
 						$query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
