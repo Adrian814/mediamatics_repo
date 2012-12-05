@@ -34,8 +34,8 @@ session_start();
                 <div id="content">
                     <?php
                     echo "<br>";
-                $db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
-        mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
+                $db = mysql_connect("localhost", "siudaa", "saihiechoo3E") or die(mysql_error());
+        mysql_select_db("proj2009-siudaa", $db) or die(mysql_error());
                 //$db = mysql_connect('localhost', 'phpmyadmin', 'mausfalle');
 
     $participantsSelected = 0;
@@ -47,7 +47,7 @@ session_start();
         exit;
     }
 
-    $mysql = mysql_select_db('db_6b0d5c75');
+    $mysql = mysql_select_db('proj2009-siudaa');
     if(!$mysql) {
         echo 'Cannot select database.';
         exit;
