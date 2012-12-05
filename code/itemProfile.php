@@ -26,7 +26,7 @@
 			
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
-
+	/*
 						//Admin: delete comments 
 						if (isset($_SESSION['nick'])) {
 						    if ($_SESSION['nick'] == 'Admin') {
@@ -100,7 +100,7 @@
 				        }
 
 				        echo "<hr>";
-   			/*			
+   					
 					    // makes a list of comments and a comment field for new comments for logged in users
 					    echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
 
