@@ -113,8 +113,7 @@
 					            mysql_query($query);
 					        }
 					    }
-						echo "<hr>";
-/*
+	
 					    $query = "SELECT * FROM `Comments` WHERE ItemId = $ItemId";
 					    $result = mysql_query($query);
 					    $num_results = mysql_num_rows($result);
@@ -140,6 +139,7 @@
 					            }
 					        	echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
 					    	}
+					/*
 					        else {
 					        	if ("Admin" != $_SESSION["nick"]) {
 					                 if ($num_results == 0) {
