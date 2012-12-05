@@ -97,8 +97,9 @@
 				                        <td>".date('d.m.o', strtotime($row['Postingdate']))."</td>
 				                    </tr>
 				                </table>";
+				 echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
 				        }
-/*
+
 				        echo "<hr>";
    						
 					    // makes a list of comments and a comment field for new comments for logged in users
@@ -114,7 +115,7 @@
 					        }
 					    }
 
-					    $query = "SELECT * FROM `Comments` WHERE ItemId=$ItemId";
+					    $query = "SELECT * FROM `Comments` WHERE ItemId = $ItemId";
 					    $result = mysql_query($query);
 					    $num_results = mysql_num_rows($result);
 					    if ($result) {
@@ -205,7 +206,7 @@
 					         ";
 					     }
 					}
-*/
+
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
 					    if($_SESSION["nick"] == "Admin") {
