@@ -92,14 +92,14 @@ session_start();
 							        <form action='index.php' method='get'>
 							            <label for='Order'>Sort by:</label>
 							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-							                            <option postingdateSelected>Postingdate</option>
-							                            <option titleSelected>Title</option>
-							                            <option categorySelected>Category</option>
+							                            <option $postingdateSelected>Postingdate</option>
+							                            <option $titleSelected>Title</option>
+							                            <option $categorySelected>Category</option>
 							                        </select>
 							        </form>
 							    </td>
 							    <td>
-							        <p align='right'>Nav<p>
+							        <p align='right'>$Nav<p>
 							    </td>
 						    </table>
 						";
