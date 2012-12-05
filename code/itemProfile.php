@@ -23,7 +23,6 @@
 		    <div id="body">
 		        <div id="content"> 
 			        <?php
-			/*
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
 
@@ -220,7 +219,6 @@
 					}
 					else
 					    echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
-					*/
 				    ?>
 			    </div>
 			    <div id="calendar">
