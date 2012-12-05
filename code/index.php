@@ -175,7 +175,7 @@ session_start();
 					    if ($Page + $NumericLinks < $PageNumber)
 					        $SkipCharactersBack = ' ...';
 
-					    $Nav = $BeginningLink;
+					    $Nav .= $BeginningLink;
 					    $Nav .= $BackLink;
 					    $Nav .= $SkipCharactersFront;
 					    $Nav .= $ViewableLinks;
