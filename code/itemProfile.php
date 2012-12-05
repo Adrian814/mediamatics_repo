@@ -140,7 +140,7 @@
 					        	echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
 					    	}
 						}
-					/*
+					
 					        else {
 					        	if ("Admin" != $_SESSION["nick"]) {
 					                 if ($num_results == 0) {
@@ -173,7 +173,7 @@
 					        		";
 					         	}
 					     
-					
+					/*
 					     else {
 					         if ($num_results == 0) {
 					             echo "<font color='blue'>There are no comments for this item at the time!</font><br><br>";
