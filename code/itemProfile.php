@@ -100,9 +100,10 @@
 				        }
 
 				        echo "<hr>";
-   					/*
+   					
 					    // makes a list of comments and a comment field for new comments for logged in users
 					    echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
+					/*
 
 					    if (isset($_POST['formaction'])) {
 					        if (empty($_POST['Content']))
