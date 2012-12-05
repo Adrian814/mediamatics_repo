@@ -41,12 +41,16 @@
                         <col>
                     </colgroup>
                     <tr>
-                        <td>Creator</td>
+                        <td>Creator*</td>
                         <td><input name='Creator' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
                         <td>Type*</td>
                         <td><input name='Type' type='text' size='30' maxlength='30'></td>
+                    </tr>
+                    <tr>
+                        <td>Title*</td>
+                        <td><input name='Title' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
                         <td>Category*</td>
@@ -61,23 +65,19 @@
                        <td>"?><?php DateSelector("Sample")?><?php echo "</td>
                    </tr>
                     <tr>
-                        <td>Duration*</td>
+                        <td>Duration</td>
                         <td><input name='Duration' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
-                        <td>Place</td>
+                        <td>Place*</td>
                         <td><input name='Duration' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
                         <td>E-Mail*</td>
                         <td><input name='E-Mail' type='text' size='30' maxlength='30'></td>
                     </tr>
-               	    <tr>
-	                    <td>Postingdate*</td>
-	                    <td>"?><?php DateSelector("Sample")?><?php echo "</td>
-	                </tr>
                     <tr>
-                        <td>Picture*</td>
+                        <td>Picture</td>
                         <td><input name='Picture' type='text' size='30' maxlength='30'></td>
                     </tr>	
                 </table><br>
