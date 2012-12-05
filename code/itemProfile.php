@@ -97,7 +97,7 @@
 				                    </tr>
 				                </table>";
 				        }
-/*
+
 				        echo "<hr>";
    						
 					    // makes a list of comments and a comment field for new comments for logged in users
@@ -204,6 +204,8 @@
 					         ";
 					     }
 					}
+					
+					echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
 
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
@@ -218,7 +220,7 @@
 							echo "<input type='button' onclick='window.location.href=\"watchlistItem.php?id=$ItemId\"' value='Watchlist' name='watchlist' /><br><br>";
 					}
 					else
-					    echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>"; */
+					    echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
 				    ?>
 			    </div>
 
