@@ -36,7 +36,7 @@
 						        }
 						    }
 						}
-			      
+			      /*
 			  		    // reads the informations of an event from the database and fills a html table
 			 	        $query = "SELECT * FROM `Items` WHERE ItemId = $ItemId";
 				        $result = mysql_query($query);
@@ -205,7 +205,7 @@
 					         ";
 					     }
 					}
-
+*/
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
 					    if($_SESSION["nick"] == "Admin") {
