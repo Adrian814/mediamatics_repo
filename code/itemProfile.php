@@ -21,7 +21,7 @@
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
             ?>
 		    <div id="body">
-		        <div id="content"> 
+		     /*   <div id="content"> 
 			        <?php
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
@@ -221,7 +221,7 @@
 					    echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
 				    ?>
 			    </div>
-
+*/
 			    <div id="calendar">
 			    	<?php
 						//include "cal.php";
