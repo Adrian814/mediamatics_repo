@@ -23,6 +23,7 @@
 		    <div id="body">
 		        <div id="content"> 
 			        <?php
+			/*
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
 
@@ -204,7 +205,7 @@
 					         ";
 					     }
 					}
-
+*/
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
 					    if($_SESSION["nick"] == "Admin") {
