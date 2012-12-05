@@ -139,6 +139,7 @@
 					            }
 					        	echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
 					    	}
+					}
 					/*
 					        else {
 					        	if ("Admin" != $_SESSION["nick"]) {
