@@ -39,7 +39,7 @@ class designclass {
               </a>';
         echo '</div>';
         echo '<div id="' . $title . '">';
-        echo '<a href="index.php" style="text-decoration:none; color:black;">helping hands</a>';
+        echo '<a href="index.php" style="text-decoration:none; color:black;">Helping Hands</a>';
         echo '</div>';
         echo '<div id="' . $nav . '">';
 
