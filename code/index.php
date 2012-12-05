@@ -66,19 +66,23 @@ session_start();
 					        if (($_GET['Order']) == 'Postingdate') {
 					            $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 					            $postingdateSelected = 'selected';
+								$Order = 'Postingdate';
 					        }
 					        elseif (($_GET['Order']) == 'Title') {
 					        	$query = "SELECT * FROM `Items` ORDER BY `Title` ASC";
 					        	$titleSelected = 'selected';
+								$Order = 'Title';
 					        }
 					        elseif (($_GET['Order']) == 'Category') {
 					        	$query = "SELECT * FROM `Items`ORDER BY `Category` ASC";
 					        	$categorySelected = 'selected';
+								$Order = 'Category';
 					        }
 					    }
 					    else {
 					        $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 					        $postingdateSelected = 'selected';
+							$Order = 'Postingdate';
 					    }
     
 					    //select menu for order             
@@ -88,14 +92,14 @@ session_start();
 							        <form action='index.php' method='get'>
 							            <label for='Order'>Sort by:</label>
 							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-							                            <option $postingdateSelected>Postingdate</option>
-							                            <option $titleSelected>Title</option>
-							                            <option $categorySelected>Category</option>
+							                            <option postingdateSelected>Postingdate</option>
+							                            <option titleSelected>Title</option>
+							                            <option categorySelected>Category</option>
 							                        </select>
 							        </form>
 							    </td>
 							    <td>
-							        <p align='right'>$Nav<p>
+							        <p align='right'>Nav<p>
 							    </td>
 						    </table>
 						";
