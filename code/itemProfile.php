@@ -97,7 +97,6 @@
 				                        <td>".date('d.m.o', strtotime($row['Postingdate']))."</td>
 				                    </tr>
 				                </table>";
-				 echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
 				        }
 
 				        echo "<hr>";
