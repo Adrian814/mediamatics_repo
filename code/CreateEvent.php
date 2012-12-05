@@ -11,23 +11,18 @@
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender", "css/web_tech.css");
-
-
+            $design->createHeader("Helping Hands > Create Event", "css/web_tech.css");
         ?>
-
     </head>
+
     <body>
         <div id="all">
-
             <?php
-
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
-
             ?>
-            <div id="body">
-                <div id="content">
-           <?php
+		<div id="body">
+        	<div id="content">
+        <?php
     
     //check the user rights       
     if (!isset($_SESSION["nick"])) {
@@ -46,52 +41,57 @@
                         <col>
                     </colgroup>
                     <tr>
-                        <td>Title*</td>
-                        <td><input name='Title' type='text' size='30' maxlength='30'></td>
+                        <td>Creator</td>
+                        <td><input name='Creator' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
                         <td>Type*</td>
                         <td><input name='Type' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
-                        <td>Date*</td>
-                        <td>"?><?php DateSelector("Sample")?><?php echo "</td>
+                        <td>Category*</td>
+                        <td><input name='Category' type='text' size='30' maxlength='30'></td>
+                    </tr>
+	                <tr>
+                       <td valign='top'>Description</td>
+                       <td><textarea name='Description' cols='50' rows='10'></textarea></td>
+                   </tr>
+                   <tr>
+                       <td>Date*</td>
+                       <td>"?><?php DateSelector("Sample")?><?php echo "</td>
+                   </tr>
+                    <tr>
+                        <td>Duration*</td>
+                        <td><input name='Duration' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
-                        <td>Time*</td>
-                        <td><input name='Hours' type='text' size='2' maxlength='2'>:<input name='Minutes' type='text' size='2' maxlength='2'><font color='grey'><i> ex: '12:30'<i><font></td>
+                        <td>Place</td>
+                        <td><input name='Duration' type='text' size='30' maxlength='30'></td>
                     </tr>
                     <tr>
-                        <td>Location*</td>
-                        <td><input name='Location' type='text' size='30' maxlength='30'></td>
+                        <td>E-Mail*</td>
+                        <td><input name='E-Mail' type='text' size='30' maxlength='30'></td>
                     </tr>
+               	    <tr>
+	                    <td>Postingdate*</td>
+	                    <td>"?><?php DateSelector("Sample")?><?php echo "</td>
+	                </tr>
                     <tr>
-                        <td>Organizer</td>
-                        <td><input name='Organizer' type='text' size='30' maxlength='30'></td>
-                    </tr>
-                    <tr>
-                        <td>Issue*</td>
-                        <td><input name='Issue' type='text' size='30' maxlength='30'></td>
-                    </tr>
-                    <tr>
-                        <td valign='top'>Description</td>
-                        <td><textarea name='Description' cols='50' rows='10'></textarea></td>
-                    </tr>
+                        <td>Picture*</td>
+                        <td><input name='Picture' type='text' size='30' maxlength='30'></td>
+                    </tr>	
                 </table><br>
                 <input type='submit' name='createEvent_form' value='Submit'>
                 <input type='reset' value='Reset'>
             </form><p>
             * mandatory!</p>";
-        }
-        
+        }  
         ?>
                 </div>
                 <div id="calendar">
                     <?php
-
                         include "cal.php";
                         //include "Calendar.php";
-
                     ?>
                 </div>
             </div>
