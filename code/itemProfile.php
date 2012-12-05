@@ -27,8 +27,8 @@
 			  			$user->getDB();
 
 						//checks the user rights
-						if (isset($_SESSION["nick"])) {
-						    if ($_SESSION["nick"] == "Admin") {
+						if (isset($_SESSION['nick'])) {
+						    if ($_SESSION['nick'] == "Admin") {
 						        if (isset($_POST['DeleteComment'])) {
 						            $CommentId = $_POST['DeleteComment'];
 						            mysql_query("DELETE FROM `Comments` WHERE CommentId = \"$CommentId\"");
@@ -37,7 +37,7 @@
 						}
 			      
 			  		    // reads the informations of an event from the database and fills a html table
-			 	        $query = "SELECT * FROM `Items` WHERE ItemId = $ItemId";
+			 	        $query = "SELECT * FROM `Items` WHERE ItemId == \"$ItemId\"";
 				        $result = mysql_query($query);
 				        if ($result) {
 				            $row = mysql_fetch_array($result);
@@ -113,7 +113,7 @@
 				            }
 				        }
         
-				        $query = "SELECT * FROM `Comments` WHERE ItemId=$ItemId";
+				        $query = "SELECT * FROM `Comments` WHERE ItemId == \"$ItemId\"";
 				        $result = mysql_query($query);
 				        $num_results = mysql_num_rows($result);
 				        if ($result) {
