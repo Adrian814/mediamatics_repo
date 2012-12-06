@@ -11,7 +11,7 @@
         $user->checkCookie();
 
         $design = new designclass();
-        $design->createHeader("Demo Kalender > Settings", "css/web_tech.css");
+        $design->createHeader("Helping Hands > User > Settings", "css/web_tech.css");
 
         // check if settings were changed in 'changeSettings.php'
         if (isset($_POST["submit"])) {
@@ -93,7 +93,7 @@
 
                 </div>
                 <div id="calendar">
-                    <?php include "cal.php"; ?>
+                    //<?php include "cal.php"; ?>
                 </div>
             </div>
         </div>
