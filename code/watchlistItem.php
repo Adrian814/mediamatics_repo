@@ -40,7 +40,7 @@ session_start();
 					        exit;
 					    }
 						
-					//	echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
+						echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
 						
 						//add item to watchlist	   
 					    if(isset($_GET["ItemId"])){
