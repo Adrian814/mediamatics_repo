@@ -23,6 +23,8 @@
 		<div id="body">
         	<div id="content">
 		        <?php
+					echo "Test";
+					/*
 				    //check the user rights       
 				    if (!isset($_SESSION["nick"])) {
 				        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
@@ -94,6 +96,7 @@
 				                <input type='reset' value='Reset'>
 				            </form><p>
 				            * mandatory!</p>";
+				*/
 			        ?>
                 </div>
                 <div id="calendar">
