@@ -23,6 +23,11 @@
 			<div id="body">
 	        	<div id="content">
 			        <?php
+				    	$postingdateSelected = 0;
+					    $titleSelected = 0;
+					    $categorySelected = 0;
+					    $Seite = 0;
+					
 					    //check the user rights       
 					    if (!isset($_SESSION["nick"])) {
 					        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
@@ -70,25 +75,6 @@
 						        $postingdateSelected = 'selected';
 								$Order = 'Postingdate';
 						    }
-						
-						    //select menu for order             
-						    echo "
-							    <table width='100%'>
-								    <td>
-								        <form action='index.php' method='get'>
-								            <label for='Order'>Sort by:</label>
-								                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-								                            <option $postingdateSelected>Postingdate</option>
-								                            <option $titleSelected>Title</option>
-								                            <option $categorySelected>Category</option>
-								                        </select>
-								        </form>
-								    </td>
-								    <td>
-								        <p align='right'>$Nav<p>
-								    </td>
-							    </table>
-							";
 						
 						    // page navigation
 						    if (!isset($_REQUEST['Total'])) {
@@ -202,7 +188,26 @@
 								        	</table>
 										</form>
 								    ";
-						} 
+						}
+						
+						//select menu for order             
+					    echo "
+						    <table width='100%'>
+							    <td>
+							        <form action='index.php' method='get'>
+							            <label for='Order'>Sort by:</label>
+							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
+							                            <option $postingdateSelected>Postingdate</option>
+							                            <option $titleSelected>Title</option>
+							                            <option $categorySelected>Category</option>
+							                        </select>
+							        </form>
+							    </td>
+							    <td>
+							        <p align='right'>$Nav<p>
+							    </td>
+						    </table>
+						"; 
         			?>
                 </div>
                 <div id="calendar">
