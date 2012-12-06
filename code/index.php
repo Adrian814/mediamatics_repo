@@ -182,7 +182,7 @@ session_start();
 							    </td>
 						    </table>
 						";
-    
+    					<br><br>
 					    // generates the list of events
 						$query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 					    $result = mysql_query($query);
@@ -191,7 +191,6 @@ session_start();
 						    for ($i=0; $i < $num_results; $i++) {
 						        $row = mysql_fetch_array($result);
 						        $Description = substr($row['Description'], 0, 200);
-
 							    echo "
 									<form action='index.php?Order=$Order&Page=$Page&Total=$Total' method='post'>
 							       	 	<table>
