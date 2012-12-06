@@ -40,6 +40,8 @@ session_start();
 					        exit;
 					    }
 
+						echo 'Test';
+						/*
 						//add item to watchlist	   
 					     if(isset($_GET["ItemId"])){
 					  		$query = "INSERT INTO Watchlist (User, EventId, Date)"
@@ -51,6 +53,7 @@ session_start();
 					 	  }
 
 						  <p><span id="add">Item successfully added to the watchlist!</span></p>
+						*/
 					?>
                 </div>
                 <div id="calendar">
