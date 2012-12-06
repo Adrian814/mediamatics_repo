@@ -128,7 +128,7 @@
 						    $Nav .= $EndLink;
 
 						    // generates the list of events
-							$query1 = 'SELECT * WHERE `User` = $user FROM `Watchlist` ORDER BY `Date` DESC';
+							$query1 ="SELECT * FROM `Watchlist` WHERE `User` = ". $_SESSION["nick"]. "ORDER BY `Date` DESC";
 						    $result1 = mysql_query($query1);
 						    if ($result1) {
 						    	$num_results1 = mysql_num_rows($result1);
