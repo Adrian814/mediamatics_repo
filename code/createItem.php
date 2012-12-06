@@ -50,7 +50,7 @@
 									<tr>
 				                        <td>Category*</td>
 				                        <td>
-											<select name='CategoryMenu'>
+											<select name='Category'>
 					                            <option value='Random Acts of Kindness'>Random Acts of Kindness</option>
 					                            <option value='Gifts'>Gifts</option>
 					                            <option value='Donation'>Donation</option>
