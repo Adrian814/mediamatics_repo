@@ -43,8 +43,8 @@
 	                        ."\"".$_POST['Duration']."\","
 	                        ."\"".$_POST['Place']."\","
 							."\"".$_POST['E-Mail']."\","						
-	                        ."\"".$_POST[$url]."\","
-							."\"".$_POST[date("Y-m-d")];
+	                        ."\"".$url."\","
+							."\"".date("Y-m-d");
 	  	  //echo $query;
 		  mysql_query($query);
    }
