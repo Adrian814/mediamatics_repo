@@ -208,15 +208,12 @@ session_start();
 									            </tr>
 									            <br>
 											</td>
-											<br><br>
-							    ";
-							}
-						    echo "
-						     	   		</table>
+							    		</table>
 									</form>
-						    ";	
+									<br><br>
+								";
+							}	
 					    }
-
 	    			?>
 	            </div>
 	    		<div id="calendar">

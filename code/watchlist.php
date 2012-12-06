@@ -184,7 +184,6 @@ session_start();
 									                    <br><a href=itemProfile.php?ItemId=".$row2['ItemId']." class='adi' style='font-style:italic;'> more...<a>
 									                </td>
 									            </tr>
-									            <br>
 											</td>
 										</table>
 									</form>
