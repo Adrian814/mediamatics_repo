@@ -44,7 +44,7 @@
 	                        ."\"".$_POST['Place']."\","
 							."\"".$_POST['E-Mail']."\","						
 	                        ."\"".$url."\","
-							."\"".date("Y-m-d");
+							."\"".date("Y-m-d").")";
 	  	  //echo $query;
 		  mysql_query($query);
    }
