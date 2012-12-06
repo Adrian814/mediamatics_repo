@@ -39,6 +39,8 @@ session_start();
 					        echo 'Cannot select database.';
 					        exit;
 					    }
+						
+						echo "Test";
 					/*
 						//add item to watchlist	   
 					     if(isset($_GET["ItemId"])){
@@ -49,7 +51,7 @@ session_start();
 					 		mysql_query($query);
 					 	  }
 */
-						  echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
+						 // echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
 					?>
                 </div>
                 <div id="calendar">
