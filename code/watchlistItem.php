@@ -25,8 +25,6 @@ session_start();
             <div id="body">
                 <div id="content">
 					<?php
-						echo "Test2";
-						/*
 					    //open database
 						$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
 						mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
@@ -41,7 +39,8 @@ session_start();
 					        echo 'Cannot select database.';
 					        exit;
 					    }
-						*/
+						
+						echo "Test";
 						
 						//add item to watchlist	   
 				//	     if(isset($_GET["ItemId"])){
@@ -53,7 +52,7 @@ session_start();
 				//	 		mysql_query($query);
 					 //	  }
 						
-*/
+
 						 // echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
 					?>
                 </div>
