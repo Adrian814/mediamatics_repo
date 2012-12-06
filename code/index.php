@@ -60,6 +60,8 @@ session_start();
 					            }
 					        }
 					    }
+					
+    					echo "<br><br>";
 
 					    // prepares the query for the order of the list
 					    if (isset($_GET['Order'])) {
@@ -182,7 +184,7 @@ session_start();
 							    </td>
 						    </table>
 						";
-    					<br><br>
+    					
 					    // generates the list of events
 						$query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 					    $result = mysql_query($query);
