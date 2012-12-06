@@ -2,7 +2,7 @@
     include "ini_set.inc.php";
 	// include "user.class.php";
 	// $user = new userclass();
-	$url = 0;
+	$url = 'http://yourtimematters.com.au/wp-content/uploads/2012/11/iStock_000002090601XSmall.jpg';
     
     //open database
 	$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
@@ -37,7 +37,7 @@
 	              ."VALUES (\"".$_SESSION["nick"]."\","
 	                        ."\"".$_POST['Type']."\","
 	                        ."\"".$_POST['Title']."\","
-							."\"".$_POST['Categroy']."\","
+							."\"".$_POST['Category']."\","
 							."\"".$_POST['Description']."\","
 	                        ."\"".$_POST['SampleYear']."-".$_POST['SampleMonth']."-".$_POST['SampleDay']."\","
 	                        ."\"".$_POST['Duration']."\","
