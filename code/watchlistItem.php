@@ -39,7 +39,7 @@ session_start();
 					        echo 'Cannot select database.';
 					        exit;
 					    }
-					
+					/*
 						//add item to watchlist	   
 					     if(isset($_GET["ItemId"])){
 					  		$query = "INSERT INTO Watchlist (User, EventId, Date)"
@@ -48,7 +48,7 @@ session_start();
 						  		."\"".$_POST['date("Y-m-d")']."\");";
 					 		mysql_query($query);
 					 	  }
-
+*/
 						  <p><span id="add">Item successfully added to the watchlist!</span></p>
 					?>
                 </div>
