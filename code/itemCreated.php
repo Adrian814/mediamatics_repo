@@ -33,7 +33,7 @@
 			$url = 'http://yourtimematters.com.au/wp-content/uploads/2012/11/iStock_000002090601XSmall.jpg';
 		else $url = $_POST['Picture'];
 	    // fills the events table in the database
-	    $query = "INSERT INTO Events (User, Type, Title, Category, Description, Date, Duration, Place, E-Mail, Picture, Postingdate)"
+	    $query = "INSERT INTO Items (User, Type, Title, Category, Description, Date, Duration, Place, E-Mail, Picture, Postingdate)"
 	              ."VALUES (\"".$_SESSION["nick"]."\","
 	                        ."\"".$_POST['Type']."\","
 	                        ."\"".$_POST['Title']."\","
