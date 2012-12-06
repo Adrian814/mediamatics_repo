@@ -135,7 +135,7 @@
 							    for ($i=0; $i < $num_results1; $i++) {
 							        $row1 = mysql_fetch_array($result1);
 							        $ItemId = $row1['ItemId']
-									$query2 = "SELECT * WHERE `ItemId` = ".$ItemId." FROM `Events` ORDER BY `Date` DESC';
+									$query2 = "SELECT * WHERE `ItemId` = ".$ItemId." FROM `Events` ORDER BY `Date` DESC";
 									$result2 = mysql_query($query2);
 									$row2 = mysql_fetch_array($result2);
 								    echo "
@@ -143,17 +143,17 @@
 								       	 	<table>
 										        <td>
 										            <tr>
-											            <b><a href=EventProfile.php?EventId=". $row2['EventId'] ." class='adi'>".$row2['Title']." [".$row2['Category']."]: </a><b>
+											            <b><a href=itemProfile.php?ItemId=".$row2['ItemId']." class='adi'>".$row2['Title']." [".$row2['Category']."]: </a><b>
 										            </tr>
 										            <tr>
 										                <td colspan='2', rowspan='2' valign='top' id='event_descr'>
 										                    $Description
-										                    <br><a class='adi' href='"."EventProfile.php?EventId=".$row2['EventId']."'style='font-style:italic;'> more...<a>
+										                    <br><a href=itemProfile.php?ItemId=".$row2['ItemId']." class='adi' style='font-style:italic;'> more...<a>
 										                </td>
 										            </tr>
 										            <br>
 												</td>
-									 ";
+								    ";
 								}
 							}
 								    echo "

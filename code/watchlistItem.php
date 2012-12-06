@@ -22,37 +22,40 @@ session_start();
             <?php
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
             ?>
-        <div id="body">
-            <div id="content">
-				<?php
-				    $db = $user->getDB();
+	        <div id="body">
+	            <div id="content">
+					<?php
+						//connect to database
+					    $db = $user->getDB();
 
-				    if (!$db) { 
-				        echo 'Error: Could not connect to database.';
-				        exit; 
-				    }
+					    if (!$db) { 
+					        echo 'Error: Could not connect to database.';
+					        exit; 
+					    }
 
-				    $mysql = mysql_select_db('user_6b0d5c75');
+					    $mysql = mysql_select_db('user_6b0d5c75');
 
-				    if(!$mysql) {
-				        echo 'Cannot select database.'; 
-				        exit;
-				    }
+					    if(!$mysql) {
+					        echo 'Cannot select database.'; 
+					        exit;
+					    }
 
-			    	<p><span id="add">Item successfully added to the watchlist!</span></p>
-			                
-                    if(isset($_GET["id"])){
-	                    // fills the events table in the database
-					    $query = "INSERT INTO Watchlist (WatchlistId, User, EventId, Date)
-					             ."VALUES (\"".$_SESSION["WatchlistId"]."\","."\"".$_POST['User']."\","."\"".$_Get['EventId']."\","."\"".$_POST['date("Y-m-d")']."\",";
-								 //echo $query;
-								 mysql_query($query);
-					}
-			   ?>
+	                    if(isset($_GET["ItemId"])){
+		                    // fills the events table in the database
+						    $query = "INSERT INTO Watchlist (WatchlistId, User, EventId, Date)"
+						              ."VALUES (\"".$_SESSION["WatchlistId"]."\","
+									  ."\"".$_POST['User']."\","
+									  ."\"".$_Get['EventId']."\","
+									  ."\"".$_POST['date("Y-m-d")']."\");";
+							//echo $query;
+					    	mysql_query($query);
+					    }
+						<p><span id="add">Item successfully added to the watchlist!</span></p>
+			   	  ?>
             </div>
                 <div id="calendar">
                     <?php
-                        include "cal.php";
+                        //include "cal.php";
                     ?>
                 </div>
             </div>
