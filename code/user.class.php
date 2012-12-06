@@ -226,7 +226,7 @@ class userclass {
     {
 // adi
        $db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
-        mysql_select_db("pdb_6b0d5c75", $db) or die(mysql_error());
+        mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
 //
 // vanderweg
 //        $db = mysql_connect("localhost", "dev.ipirate.ch", "ipirate1") or die(mysql_error());
