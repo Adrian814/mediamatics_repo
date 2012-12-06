@@ -30,6 +30,7 @@
 				    if (isset($_SESSION["nick"])) {
 						include 'Date.php'; // this file is needed for the date fields of the form
 						echo "Test";
+					}
 				        //form
 				/*
 				        echo"
