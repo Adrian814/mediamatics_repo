@@ -213,7 +213,7 @@ session_start();
 						    echo "
 						     	   		</table>
 									</form>
-									<br>
+									<br><br>
 						    ";	
 					    }
 

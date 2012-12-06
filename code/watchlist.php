@@ -188,7 +188,7 @@ session_start();
 											</td>
 										</table>
 									</form>
-									<br>
+									<br><br>
 								 ";
 							}
 						}
