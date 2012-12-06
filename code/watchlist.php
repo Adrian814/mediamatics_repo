@@ -159,12 +159,13 @@
 								    echo "
 								        	</table>
 										</form>
-								    "; 
+								    ";
+						} 
         			?>
                 </div>
                 <div id="calendar">
                     <?php
-                        include "cal.php";
+                        //include "cal.php";
                         //include "Calendar.php";
                     ?>
                 </div>
