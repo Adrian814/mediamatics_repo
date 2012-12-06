@@ -46,7 +46,7 @@ session_start();
 						              ."VALUES ('".$_SESSION["nick"]."', '".$_GET["ItemId"]."', '".date("Y-m-d")."');";						
 						  	//echo $query;
 							mysql_query($query);
-							echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
+							echo "Item successfully added to the watchlist!";
 						}		
 					?>
                 </div>
