@@ -45,12 +45,12 @@
 				                    </tr>
 				                    <tr>
 				                        <td>Title*</td>
-				                        <td><input name='Type' type='text' size='30' maxlength='30'></td>
+				                        <td><input name='Title' type='text' size='30' maxlength='30'></td>
 				                    </tr>
 									<tr>
 				                        <td>Category*</td>
 				                        <td>
-											<select name='CategoryMenu' >
+											<select name='CategoryMenu'>
 					                            <option value='Random Acts of Kindness'>Random Acts of Kindness</option>
 					                            <option value='Gifts'>Gifts</option>
 					                            <option value='Donation'>Donation</option>
