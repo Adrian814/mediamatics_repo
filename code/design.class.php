@@ -43,10 +43,10 @@ class designclass {
         echo '</div>';
         echo '<div id="' . $nav . '">';
 
-        echo '<a href="index.php" class="' . $nav_class . '">Items</a> ';
+        echo '<a href="index.php" class="' . $nav_class . '">Items</a>   ';
         if (isset($_SESSION["nick"])) {
-            echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a> ';
-			echo '<a href="watchlist.php/?' .$_SESSION["nick"]. 'class="' . $nav_class . '">MyWatchlist</a> ';
+            echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>   ';
+			echo '<a href="watchlist.php/?'.$_SESSION["nick"]." 'class="' . $nav_class . '">MyWatchlist</a>';
             if ($_SESSION["nick"] == "Admin") {
                 echo '<a href="adminuser.php" class="' . $nav_class . '">User</a> ';
             }
