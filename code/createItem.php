@@ -79,7 +79,7 @@
 				                    </tr>
 									<tr>
 					                    <td>Place*</td>
-					                    <td><input name='Duration' type='text' size='30' maxlength='30'></td>
+					                    <td><input name='Place' type='text' size='30' maxlength='30'></td>
 					                </tr>
 				                    <tr>
 				                        <td>E-Mail</td>
