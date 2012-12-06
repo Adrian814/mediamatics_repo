@@ -47,7 +47,7 @@ session_start();
 			 			//	mysql_query($query);
 						}
 						
-					//	echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
+						echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
 					?>
                 </div>
                 <div id="calendar">
