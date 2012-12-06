@@ -34,12 +34,9 @@
             <div id="body">
                 <div id="content">
                     <h2>About</h2>
-                     The purpose of this website is to create a plattform for political activists.
-                     An activist can create an account in order to add new events to the list. Being
-                     a member one can also comment and rate existing events.
+                     Platform for help services (demand and request)
                      
-                     <p>This website was written by Adrian Siuda and Tobias Sennhauser
-                     for a project called "Web Technologies" taught at University of Fribourg in 2009.</p>
+                     <p>This website was written by Adrian Siuda.</p>
 
                      <p>
                          Comments and remarks can be sent to the <a href="mailto:democal2009@gmail.com">admin</a>.
