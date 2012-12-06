@@ -87,10 +87,6 @@
                         echo "</span>";
                     }
                     ?>
-
-
-
-
                 </div>
                 <div id="calendar">
                 </div>
