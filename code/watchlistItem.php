@@ -40,20 +40,13 @@ session_start();
 					        exit;
 					    }
 						
-						
-						
 						//add item to watchlist	   
 					    if(isset($_GET["ItemId"])){
-						echo "Test2";
-					  	//	$query = "INSERT INTO Watchlist (User, EventId, Date)"
-					//            ."VALUES (\"".$_SESSION["nick"]."\","
-				//		  		."\"".$_Get['EventId']."\","
-					//	  		."\"".$_POST['date("Y-m-d")']."\");";
-				//	 		mysql_query($query);
+					  		$query = "INSERT INTO Watchlist (User, EventId, Date)"."VALUES (\"".$_SESSION["nick"]."\","."\"".$_Get['EventId']."\","."\"".$_POST['date("Y-m-d")']."\");";
+			 				mysql_query($query);
 						}
 						
-
-						 // echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
+						echo "<p><span id="add">Item successfully added to the watchlist!</span></p>";
 					?>
                 </div>
                 <div id="calendar">
