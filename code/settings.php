@@ -87,8 +87,13 @@
                         echo "</span>";
                     }
                     ?>
+
+
+
+
                 </div>
                 <div id="calendar">
+                    <?php include "cal.php"; ?>
                 </div>
             </div>
         </div>
