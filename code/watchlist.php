@@ -47,6 +47,49 @@
 								
 							$query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 							
+						    // prepares the query for the order of the list
+						    if (isset($_GET['Order'])) {
+						        if (($_GET['Order']) == 'Postingdate') {
+						            $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
+						            $postingdateSelected = 'selected';
+									$Order = 'Postingdate';
+						        }
+						        elseif (($_GET['Order']) == 'Title') {
+						        	$query = "SELECT * FROM `Items` ORDER BY `Title` ASC";
+						        	$titleSelected = 'selected';
+									$Order = 'Title';
+						        }
+						        elseif (($_GET['Order']) == 'Category') {
+						        	$query = "SELECT * FROM `Items`ORDER BY `Category` ASC";
+						        	$categorySelected = 'selected';
+									$Order = 'Category';
+						        }
+						    }
+						    else {
+						        $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
+						        $postingdateSelected = 'selected';
+								$Order = 'Postingdate';
+						    }
+						
+						    //select menu for order             
+						    echo "
+							    <table width='100%'>
+								    <td>
+								        <form action='index.php' method='get'>
+								            <label for='Order'>Sort by:</label>
+								                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
+								                            <option $postingdateSelected>Postingdate</option>
+								                            <option $titleSelected>Title</option>
+								                            <option $categorySelected>Category</option>
+								                        </select>
+								        </form>
+								    </td>
+								    <td>
+								        <p align='right'>$Nav<p>
+								    </td>
+							    </table>
+							";
+						
 						    // page navigation
 						    if (!isset($_REQUEST['Total'])) {
 						        $result = mysql_query($query);
