@@ -48,10 +48,6 @@
                 </div>
                 <div id="calendar">
                     <?php
-
-                        include "cal.php";
-                        //include "Calendar.php";
-
                     ?>
                 </div>
             </div>
