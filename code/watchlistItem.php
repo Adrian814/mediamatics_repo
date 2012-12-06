@@ -44,11 +44,9 @@ session_start();
 						
 						//add item to watchlist	   
 					    if(isset($_GET["ItemId"])){
-							echo "fff";
-						    $query = "INSERT INTO `Watchlist` (`User`, `ItemId`, `Date`)"
-						              ."VALUES (\"".$_SESSION["nick"]."\","
-						                        ."\"".$_GET['ItemId']."\","
-												."\"".date("Y-m-d")."\");";						
+							echo "222";
+						    $query = "INSERT INTO `Watchlist` (`User`, `ItemId`, `Date`) "
+						              ."VALUES ('".$_SESSION["nick"]."', '".$_GET["ItemId"]."', ".date("Y-m-d")."');";						
 						  	//echo $query;
 							mysql_query($query);
 						}
