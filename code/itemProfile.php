@@ -216,8 +216,8 @@
 					            </form>";
 					    }
 					    else
-					        echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
-							echo "<input type='button' onclick='window.location.href=\"watchlistItem.php?id=$ItemId\"' value='Watchlist' name='watchlist' /><br><br>";
+					        echo "<input type='button' onclick='window.location.href=\"reportItem.php?ItemId=$ItemId\"' value='Report Item' name='report' /><br><br>";
+							echo "<input type='button' onclick='window.location.href=\"watchlistItem.php?ItemId=$ItemId\"' value='Watchlist' name='watchlist' /><br><br>";
 					}
 					else
 					    echo "<input type='button' onclick='window.location.href=\"reportItem.php?id=$ItemId\"' value='Report Item' name='report' /><br><br>";
