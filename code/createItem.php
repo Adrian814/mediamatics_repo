@@ -23,8 +23,6 @@
 		<div id="body">
         	<div id="content">
 		        <?php
-					echo "Test";
-					/*
 				    //check the user rights       
 				    if (!isset($_SESSION["nick"])) {
 				        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
@@ -92,11 +90,10 @@
 				                        <td><input name='Picture' type='text' size='100' maxlength='30'></td>
 				                    </tr>
 				                </table><br>
-				                <input type='submit' name='createEvent_form' value='Submit'>
+				                <input type='submit' name='createItem_form' value='Submit'>
 				                <input type='reset' value='Reset'>
 				            </form><p>
 				            * mandatory!</p>";
-				*/
 			        ?>
                 </div>
                 <div id="calendar">
