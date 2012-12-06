@@ -2,19 +2,20 @@
     include "ini_set.inc.php";
 	// include "user.class.php";
 	// $user = new userclass();
-    $db = $user->getDB();
 	$url = 0;
     
     //open database
-    if (!$db) { 
-        echo 'Error: Could not connect to database.';
-        exit; 
-    }
-    
-    $mysql = mysql_select_db('user_6b0d5c75');
+	$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
+	mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
 
+    if (!$db) {
+        echo 'Error: Could not connect to database.';
+        exit;
+    }
+
+    $mysql = mysql_select_db('db_6b0d5c75');
     if(!$mysql) {
-        echo 'Cannot select database.'; 
+        echo 'Cannot select database.';
         exit;
     }
 
