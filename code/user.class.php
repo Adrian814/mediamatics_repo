@@ -51,7 +51,7 @@ class userclass {
      */
     function login($user, $pw)
     {
-        $users = mysql_query('SELECT * FROM user WHERE
+        $users = mysql_query('SELECT * FROM `user` WHERE
                     nick = "' . $user . '" AND
                     pw = "' . md5($pw) . '"');
 
