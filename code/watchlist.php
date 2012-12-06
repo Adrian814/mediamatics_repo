@@ -23,18 +23,16 @@
 			<div id="body">
 	        	<div id="content">
 			        <?php
-				    	$postingdateSelected = 0;
-					    $titleSelected = 0;
-					    $categorySelected = 0;
-					    $Seite = 0;
-					
 					    //check the user rights       
 					    if (!isset($_SESSION["nick"])) {
 					        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
 					    }
 					    if (isset($_SESSION["nick"])) {
-							$Seite = 0;
-					
+						   	$postingdateSelected = 0;
+						    $titleSelected = 0;
+						    $categorySelected = 0;
+						    $Seite = 0;
+							
 							//connects to database
 					   		$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
 							mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
@@ -49,8 +47,6 @@
 						        echo 'Cannot select database.';
 						        exit;
 						    }
-								
-							$query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
 							
 						    // prepares the query for the order of the list
 						    if (isset($_GET['Order'])) {
@@ -181,33 +177,31 @@
 										            </tr>
 										            <br>
 												</td>
-								    ";
+											</table>
+										</form>
+									 ";
 								}
 							}
-								    echo "
-								        	</table>
-										</form>
-								    ";
-						}
 						
-						//select menu for order             
-					    echo "
-						    <table width='100%'>
-							    <td>
-							        <form action='index.php' method='get'>
-							            <label for='Order'>Sort by:</label>
-							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-							                            <option $postingdateSelected>Postingdate</option>
-							                            <option $titleSelected>Title</option>
-							                            <option $categorySelected>Category</option>
-							                        </select>
-							        </form>
-							    </td>
-							    <td>
-							        <p align='right'>$Nav<p>
-							    </td>
-						    </table>
-						"; 
+							//select menu for order             
+						    echo "
+							    <table width='100%'>
+								    <td>
+								        <form action='index.php' method='get'>
+								            <label for='Order'>Sort by:</label>
+								                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
+								                            <option $postingdateSelected>Postingdate</option>
+								                            <option $titleSelected>Title</option>
+								                            <option $categorySelected>Category</option>
+								                        </select>
+								        </form>
+								    </td>
+								    <td>
+								        <p align='right'>$Nav<p>
+								    </td>
+							    </table>
+							";
+						} 
         			?>
                 </div>
                 <div id="calendar">
