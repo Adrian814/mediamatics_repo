@@ -134,7 +134,7 @@
 						    	$num_results1 = mysql_num_rows($result1);
 							    for ($i=0; $i < $num_results1; $i++) {
 							        $row1 = mysql_fetch_array($result1);
-							        $ItemId = $row1['ItemId']
+							        $ItemId = $row1['ItemId'];
 									$query2 = "SELECT * WHERE `ItemId` = ".$ItemId." FROM `Events` ORDER BY `Date` DESC";
 									$result2 = mysql_query($query2);
 									$row2 = mysql_fetch_array($result2);
