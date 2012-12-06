@@ -2,7 +2,6 @@
     include "ini_set.inc.php";
 	// include "user.class.php";
 	// $user = new userclass();
-	$url = 'http://yourtimematters.com.au/wp-content/uploads/2012/11/iStock_000002090601XSmall.jpg';
     
     //open database
 	$db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
@@ -20,7 +19,7 @@
     }
 
     // checks, if all fields were filled
-    elseif (empty($_POST['Type'])
+    if (empty($_POST['Type'])
     	or empty($_POST['Title'])
 		or empty($_POST['Category'])
        	or empty($_POST['SampleYear']) or empty($_POST['SampleMonth']) or empty($_POST['SampleDay'])
