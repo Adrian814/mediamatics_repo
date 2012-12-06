@@ -196,7 +196,7 @@ class userclass {
         // debug
         //echo "DB: " . $db . ", User: " . $user . ", Field: ". $field;
 
-        $txt  ='SELECT * FROM user WHERE
+        $txt  ='SELECT * FROM User WHERE
                     nick = "' . $user . '"';
         //echo $txt;
         $sql = mysql_query($txt);
