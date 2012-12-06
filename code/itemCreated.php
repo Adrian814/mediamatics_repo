@@ -3,7 +3,7 @@
 	// include "user.class.php";
 	// $user = new userclass();
     $db = $user->getDB();
-	var $url
+	$url = 0;
     
     //open database
     if (!$db) { 
