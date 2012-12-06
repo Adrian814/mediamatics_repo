@@ -208,12 +208,12 @@ session_start();
 									            </tr>
 									            <br>
 											</td>
+											<br><br>
 							    ";
 							}
 						    echo "
 						     	   		</table>
 									</form>
-									<br><br>
 						    ";	
 					    }
 
