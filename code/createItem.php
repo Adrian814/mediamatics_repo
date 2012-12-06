@@ -27,12 +27,9 @@
 				    if (!isset($_SESSION["nick"])) {
 				        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
 				    }
-				    if (isset($_SESSION["nick"])) {
+				    else {
 						include 'Date.php'; // this file is needed for the date fields of the form
-						echo "Test";
-					}
 				        //form
-				/*
 				        echo"
 				            <h2>Create New Item</h2>
 				            Please enter all the necessary information about your item!<br><br>
@@ -97,7 +94,7 @@
 				                <input type='reset' value='Reset'>
 				            </form><p>
 				            * mandatory!</p>";
-				*/
+						}
 			        ?>
                 </div>
                 <div id="calendar">
