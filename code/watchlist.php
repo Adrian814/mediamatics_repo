@@ -55,6 +55,8 @@ session_start();
 					        exit;
 					    }
 						
+						echo "<br><br>";
+						
 					    // prepares the query for the order of the list
 					    if (isset($_GET['Order'])) {
 					        if (($_GET['Order']) == 'Postingdate') {
