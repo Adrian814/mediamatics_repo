@@ -114,37 +114,36 @@
 					        }
 					    }
 	
-					    $query = "SELECT * FROM `Comments` WHERE ItemId = $ItemId";
-					    $result = mysql_query($query);
-					    $num_results = mysql_num_rows($result);
-					    if ($result) {
-					        if (!isset($_SESSION["nick"])) {
-					            if ($num_results == 0) {
-					                echo "<font color='blue'>There are no comments for this Item at the time!</font><br><br>";
-					            }
-					            else {
-					                for ($i=0; $i < $num_results; $i++) {
-					                    $row = mysql_fetch_array($result);
-					                    echo "
-					                        <table cellpadding ='5' width='80%'>
-					                            <tr>
-					                                <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['User']."</td>
-					                            </tr>
-					                            <tr>
-					                                <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
-					                            </tr>
-					                        </table>
-					                    ";
-					                }
-					            }
-					        	echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
-					    	}
-						}
-					/*
-					        else {
-					        	if ("Admin" != $_SESSION["nick"]) {
+  
+					     $query = "SELECT * FROM `Comments` WHERE ItemId=$ItemId";
+					     $result = mysql_query($query);
+					     $num_results = mysql_num_rows($result);
+					     if ($result) {
+					         if (!isset($_SESSION["nick"])) {
+					             if ($num_results == 0) {
+					                 echo "<font color='blue'>There are no comments for this item at the time!</font><br><br>";
+					             }
+					             else {
+					                 for ($i=0; $i < $num_results; $i++) {
+					                     $row = mysql_fetch_array($result);
+					                     echo "
+					                         <table cellpadding ='5' width='80%'>
+					                             <tr>
+					                                 <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['User']."</td>
+					                             </tr>
+					                             <tr>
+					                                 <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
+					                             </tr>
+					                         </table>
+					                     ";
+					                 }
+					             }
+					             echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
+					         }
+					         else {
+					             if ("Admin" != $_SESSION["nick"]) {
 					                 if ($num_results == 0) {
-					                     echo "<font color='blue'>There are no comments for this item at the time!</font><br><br>";
+					                     echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
 					                 }
 					                 else {
 					                     for ($i=0; $i < $num_results; $i++) {
@@ -152,7 +151,7 @@
 					                         echo "
 					                             <table cellpadding ='5' width='80%'>
 					                                 <tr>
-					                                     <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
+					                                     <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['Creator']."</a>:"."</td>
 					                                 </tr>
 					                                 <tr>
 					                                     <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
@@ -161,54 +160,53 @@
 					                         ";
 					                     }
 					                 }
-							        echo "
-							            <br><br>
-							            Enter a comment, if you like!<br><br>
-							            <form action='itemProfile.php?ItemId=$ItemId' method='post'>
-							                <textarea name='Content' cols='30' rows='5'></textarea>
-							                <br>
-							                <input type='submit' name='formaction' value='Submit'>
-							                <input type='reset' value='Reset'><br><br>
-							            </form>
-					        		";
-					         	}
-					     
-					*/
-					     else {
-					         if ($num_results == 0) {
-					             echo "<font color='blue'>There are no comments for this item at the time!</font><br><br>";
-					         }
-					         else {
-					             for ($i=0; $i < $num_results; $i++) {
-					                 $row = mysql_fetch_array($result);
 					                 echo "
-					                     <form action='itemProfile.php?ItemId=$ItemId' method='post'>
-					                         <table cellpadding ='5' width='80%'>
-					                             <tr>
-					                                 <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
-					                             </tr>
-					                             <tr>
-					                             	 <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
-					                             </tr>
-					                             </table>
-					                             <button name='DeleteComment' type='submit' value='".$row['CommentId']."'>Delete Comment</button><br>
-					                         </form>
-					                 ";  
+					                     <br><br>
+					                     Enter a comment, if you like!<br><br>
+					                     <form action='EventProfile.php?EventId=$EventId' method='post'>
+					                         <textarea name='Content' cols='30' rows='5'></textarea>
+					                         <br>
+					                         <input type='submit' name='formaction' value='Submit'>
+					                         <input type='reset' value='Reset'><br><br>
+					                     </form>
+					                 ";
+					                 }
+					     	       else {
+					                 if ($num_results == 0) {
+					                     echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
+					                 }
+					                 else {
+					                     for ($i=0; $i < $num_results; $i++) {
+					                         $row = mysql_fetch_array($result);
+					                         echo "
+					                             <form action='EventProfile.php?EventId=$EventId' method='post'>
+					                                 <table cellpadding ='5' width='80%'>
+					                                     <tr>
+					                                         <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['Creator']."</a>:"."</td>
+					                                     </tr>
+					                                     <tr>
+					                                         <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
+					                                     </tr>
+					                                 </table>
+					                                 <button name='DeleteComment' type='submit' value='".$row['CommentId']."'>Delete Comment</button><br>
+					                             </form>
+					                         ";  
+					                     }
+					                 }
+					                 echo "
+					                     <br><br>
+					                     Enter a comment, if you like!<br><br>
+					                     <form action='EventProfile.php?EventId=$EventId' method='post'>
+					                     <textarea name='Content' cols='30' rows='5'></textarea>
+					                     <br>
+					                     <input type='submit' name='formaction' value='Submit'>
+					                     <input type='reset' value='Reset'><br><br>
+					                 </form>
+					                 ";
 					             }
 					         }
-					         echo "
-					             <br><br>
-					             Enter a comment, if you like!<br><br>
-					             <form action='itemProfile.php?ItemId=$ItemId' method='post'>
-					                 <textarea name='Content' cols='30' rows='5'></textarea>
-					                 <br>
-					                 <input type='submit' name='formaction' value='Submit'>
-					                 <input type='reset' value='Reset'><br><br>
-					         	</form>
-					         ";
 					     }
-					}
-*/
+					
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
 					    if($_SESSION["nick"] == "Admin") {
