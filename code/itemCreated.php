@@ -21,10 +21,10 @@
 
     // checks, if all fields were filled
     elseif (empty($_POST['Type'])
-            or empty($_POST['Title'])
+           // or empty($_POST['Title'])
 		//	or empty($_POST['Category'])
-            or empty($_POST['SampleYear']) or empty($_POST['SampleMonth']) or empty($_POST['SampleDay'])
-            or empty($_POST['Place']))
+       //     or empty($_POST['SampleYear']) or empty($_POST['SampleMonth']) or empty($_POST['SampleDay'])
+         //   or empty($_POST['Place']))
                 echo "<font color='red'>Please fill all the mandatory fields!</font><br><br>
                 <a href='./createItem.php'>< Back to \"Create Event\"</a><br>";
     else {
