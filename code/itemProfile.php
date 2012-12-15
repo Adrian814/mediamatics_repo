@@ -108,7 +108,7 @@
 				            if (empty($_POST['Content']))
 				                   echo "<font color='red'>Please fill the comment-field!</font><br><br>";
 				            else {
-				                $query = "INSERT INTO Comments (ItemId, Date, Creator, Content)" .
+				                $query = "INSERT INTO Comments (ItemId, Date, User, Content)" .
 				                         "VALUES (\"".$ItemId."\","
 				                                 ."NOW(),"
 				                                 ."\"".$_SESSION["nick"]."\","
@@ -131,7 +131,7 @@
 				                        echo "
 				                            <table cellpadding ='5' width='80%'>
 				                                <tr>
-				                                    <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['Creator']."</td>
+				                                    <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['User']."</td>
 				                                </tr>
 				                                <tr>
 				                                    <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
@@ -153,7 +153,7 @@
 				                            echo "
 				                                <table cellpadding ='5' width='80%'>
 				                                    <tr>
-				                                        <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['Creator']."' class='nav'>".$row['Creator']."</a>:"."</td>
+				                                        <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
 				                                    </tr>
 				                                    <tr>
 				                                        <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
@@ -184,7 +184,7 @@
 				                                <form action='itemProfile.php?ItemId=$ItemId' method='post'>
 				                                    <table cellpadding ='5' width='80%'>
 				                                        <tr>
-				                                            <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['Creator']."' class='nav'>".$row['Creator']."</a>:"."</td>
+				                                            <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
 				                                        </tr>
 				                                        <tr>
 				                                            <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
