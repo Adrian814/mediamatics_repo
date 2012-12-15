@@ -172,7 +172,7 @@ session_start();
 								$query2 = "SELECT * FROM `Items` WHERE `ItemId` = "."'".$ItemId."'"." ORDER BY `Date` DESC;";
 								$result2 = mysql_query($query2);
 								$row2 = mysql_fetch_array($result2);
-								$Description = substr($row['Description'], 0, 200);
+								$Description = substr($row2['Description'], 0, 200);
 							    echo "
 									<form action='index.php?Order=$Order&Page=$Page&Total=$Total' method='post'>
 							       	 	<table>
