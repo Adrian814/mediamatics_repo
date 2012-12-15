@@ -179,7 +179,7 @@
 					                     for ($i=0; $i < $num_results; $i++) {
 					                         $row = mysql_fetch_array($result);
 					                         echo "
-					                             <form action='EventProfile.php?ItemId=$ItemId' method='post'>
+					                             <form action='ItemProfile.php?ItemId=$ItemId' method='post'>
 					                                 <table cellpadding ='5' width='80%'>
 					                                     <tr>
 					                                         <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
