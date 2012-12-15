@@ -165,7 +165,7 @@
 				                    echo "
 				                        <br><br>
 				                        Enter a comment, if you like!<br><br>
-				                        <form action='itemProfile.php?itemId=$itemId' method='post'>
+				                        <form action='itemProfile.php?ItemId=$ItemId' method='post'>
 				                            <textarea name='Content' cols='30' rows='5'></textarea>
 				                            <br>
 				                            <input type='submit' name='formaction' value='Submit'>
@@ -181,7 +181,7 @@
 				                        for ($i=0; $i < $num_results; $i++) {
 				                            $row = mysql_fetch_array($result);
 				                            echo "
-				                                <form action='itemProfile.php?itemId=$itemId' method='post'>
+				                                <form action='itemProfile.php?ItemId=$ItemId' method='post'>
 				                                    <table cellpadding ='5' width='80%'>
 				                                        <tr>
 				                                            <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['Creator']."' class='nav'>".$row['Creator']."</a>:"."</td>
