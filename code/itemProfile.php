@@ -111,8 +111,8 @@
 				                $query = "INSERT INTO Comments (ItemId, Date, User, Content)" .
 				                         "VALUES (\"".$ItemId."\","
 				                                 ."NOW(),"
-				                                 ."\"".$_POST['Content']."\","
-				                                 ."\"".$_POST['Content']."\");";
+				                                 ."\"".$ItemId."\","
+				                                 ."\"".$ItemId."\");";
 				                mysql_query($query);
 				            }
 				        }
