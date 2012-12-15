@@ -196,7 +196,7 @@
 					                 echo "
 					                     <br><br>
 					                     Enter a comment, if you like!<br><br>
-					                     <form action='EventProfile.php?ItemId=$ItemId' method='post'>
+					                     <form action='itemProfile.php?ItemId=$ItemId' method='post'>
 					                     <textarea name='Content' cols='30' rows='5'></textarea>
 					                     <br>
 					                     <input type='submit' name='formaction' value='Submit'>
