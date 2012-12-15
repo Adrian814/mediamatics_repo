@@ -108,8 +108,8 @@
 					        if (empty($_POST['Content']))
 					               echo "<font color='red'>Please fill the comment-field!</font><br><br>";
 					        else {
-					            $query = "INSERT INTO Comments (ItemId, User, Date, Content)" .
-					                     "VALUES (\"".$ItemId."\"".$_SESSION["nick"]."\"".NOW()."\"".$_POST['Content']."\");";
+					            $query = "INSERT INTO Comments (User, Date, Content)" .
+					                     "VALUES (".$_SESSION["nick"]."\"".NOW()."\"".$_POST['Content']."\");";
 					            mysql_query($query);
 					        }
 					    }
