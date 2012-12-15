@@ -161,7 +161,7 @@ session_start();
 					    $Nav .= $EndLink;
 					
 					    // generates the list of events
-						$query1 = "SELECT * FROM `Watchlist` WHERE `User` = ".$_SESSION["nick"]." ORDER BY `Date` DESC";
+						$query1 = "SELECT * FROM `Watchlist` WHERE `User` = "."'".$_SESSION["nick"]."'"." ORDER BY `Date` DESC;";
 					    $result1 = mysql_query($query1);
 						echo $query1;
 					    if ($result1) {
@@ -169,7 +169,7 @@ session_start();
 						    for ($i=0; $i < $num_results1; $i++) {
 						        $row1 = mysql_fetch_array($result1);
 						        $ItemId = $row1['ItemId'];
-								$query2 = "SELECT * FROM `Items` WHERE `ItemId` = ".$ItemId." ORDER BY `Date` DESC";
+								$query2 = "SELECT * FROM `Items` WHERE `ItemId` = "."'".$ItemId."'"." ORDER BY `Date` DESC;";
 								$result2 = mysql_query($query2);
 								$row2 = mysql_fetch_array($result2);
 							    echo "
