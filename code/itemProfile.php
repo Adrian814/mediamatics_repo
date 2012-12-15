@@ -101,111 +101,113 @@
 
 				        echo "<hr>";
    					
-					    // makes a list of comments and a comment field for new comments for logged in users
-					    echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
+				        // makes a list of comments and a comment field for new comments for logged in users
+				        echo "<h3><img src='./pictures/Bubble.jpg'> Comments:</h3>";
 
-					    if (isset($_POST['formaction'])) {
-					        if (empty($_POST['Content']))
-					               echo "<font color='red'>Please fill the comment-field!</font><br><br>";
-					        else {
-					            $query = "INSERT INTO Comments (User, Date, Content)" .
-					                     "VALUES (".$_SESSION["nick"]."\"".NOW()."\"".$_POST['Content']."\");";
-					            mysql_query($query);
-					        }
-					    }
-	
-  
-					     $query = "SELECT * FROM `Comments` WHERE ItemId=$ItemId";
-					     $result = mysql_query($query);
-					     $num_results = mysql_num_rows($result);
-					     if ($result) {
-					         if (!isset($_SESSION["nick"])) {
-					             if ($num_results == 0) {
-					                 echo "<font color='blue'>There are no comments for this item at the time!</font><br><br>";
-					             }
-					             else {
-					                 for ($i=0; $i < $num_results; $i++) {
-					                     $row = mysql_fetch_array($result);
-					                     echo "
-					                         <table cellpadding ='5' width='80%'>
-					                             <tr>
-					                                 <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['User']."</td>
-					                             </tr>
-					                             <tr>
-					                                 <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
-					                             </tr>
-					                         </table>
-					                     ";
-					                 }
-					             }
-					             echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
-					         }
-					         else {
-					             if ("Admin" != $_SESSION["nick"]) {
-					                 if ($num_results == 0) {
-					                     echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
-					                 }
-					                 else {
-					                     for ($i=0; $i < $num_results; $i++) {
-					                         $row = mysql_fetch_array($result);
-					                         echo "
-					                             <table cellpadding ='5' width='80%'>
-					                                 <tr>
-					                                     <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['Creator']."</a>:"."</td>
-					                                 </tr>
-					                                 <tr>
-					                                     <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
-					                                 </tr>
-					                             </table>
-					                         ";
-					                     }
-					                 }
-					                 echo "
-					                     <br><br>
-					                     Enter a comment, if you like!<br><br>
-					                     <form action='itemProfile.php?ItemId=$ItemId' method='post'>
-					                         <textarea name='Content' cols='30' rows='5'></textarea>
-					                         <br>
-					                         <input type='submit' name='formaction' value='Submit'>
-					                         <input type='reset' value='Reset'><br><br>
-					                     </form>
-					                 ";
-					                 }
-					     	       else {
-					                 if ($num_results == 0) {
-					                     echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
-					                 }
-					                 else {
-					                     for ($i=0; $i < $num_results; $i++) {
-					                         $row = mysql_fetch_array($result);
-					                         echo "
-					                             <form action='ItemProfile.php?ItemId=$ItemId' method='post'>
-					                                 <table cellpadding ='5' width='80%'>
-					                                     <tr>
-					                                         <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['User']."' class='nav'>".$row['User']."</a>:"."</td>
-					                                     </tr>
-					                                     <tr>
-					                                         <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
-					                                     </tr>
-					                                 </table>
-					                                 <button name='DeleteComment' type='submit' value='".$row['CommentId']."'>Delete Comment</button><br>
-					                             </form>
-					                         ";  
-					                     }
-					                 }
-					                 echo "
-					                     <br><br>
-					                     Enter a comment, if you like!<br><br>
-					                     <form action='itemProfile.php?ItemId=$ItemId' method='post'>
-					                     <textarea name='Content' cols='30' rows='5'></textarea>
-					                     <br>
-					                     <input type='submit' name='formaction' value='Submit'>
-					                     <input type='reset' value='Reset'><br><br>
-					                 </form>
-					                 ";
-					             }
-					         }
-					     }
+				        if (isset($_POST['formaction'])) {
+				            if (empty($_POST['Content']))
+				                   echo "<font color='red'>Please fill the comment-field!</font><br><br>";
+				            else {
+				                $query = "INSERT INTO Comments (ItemId, Date, Creator, Content)" .
+				                         "VALUES (\"".$ItemId."\","
+				                                 ."NOW(),"
+				                                 ."\"".$_SESSION["nick"]."\","
+				                                 ."\"".$_POST['Content']."\");";
+				                mysql_query($query);
+				            }
+				        }
+
+				        $query = "SELECT * FROM `Comments` WHERE ItemId=$ItemId";
+				        $result = mysql_query($query);
+				        $num_results = mysql_num_rows($result);
+				        if ($result) {
+				            if (!isset($_SESSION["nick"])) {
+				                if ($num_results == 0) {
+				                    echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
+				                }
+				                else {
+				                    for ($i=0; $i < $num_results; $i++) {
+				                        $row = mysql_fetch_array($result);
+				                        echo "
+				                            <table cellpadding ='5' width='80%'>
+				                                <tr>
+				                                    <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by ".$row['Creator']."</td>
+				                                </tr>
+				                                <tr>
+				                                    <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
+				                                </tr>
+				                            </table>
+				                        ";
+				                    }
+				                }
+				                echo "<br><font color='blue'>You have to be logged in to comment!</font><br><br>";
+				            }
+				            else {
+				                if ("Admin" != $_SESSION["nick"]) {
+				                    if ($num_results == 0) {
+				                        echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
+				                    }
+				                    else {
+				                        for ($i=0; $i < $num_results; $i++) {
+				                            $row = mysql_fetch_array($result);
+				                            echo "
+				                                <table cellpadding ='5' width='80%'>
+				                                    <tr>
+				                                        <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['Creator']."' class='nav'>".$row['Creator']."</a>:"."</td>
+				                                    </tr>
+				                                    <tr>
+				                                        <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
+				                                    </tr>
+				                                </table>
+				                            ";
+				                        }
+				                    }
+				                    echo "
+				                        <br><br>
+				                        Enter a comment, if you like!<br><br>
+				                        <form action='itemProfile.php?itemId=$itemId' method='post'>
+				                            <textarea name='Content' cols='30' rows='5'></textarea>
+				                            <br>
+				                            <input type='submit' name='formaction' value='Submit'>
+				                            <input type='reset' value='Reset'><br><br>
+				                        </form>
+				                    ";
+				                    }
+				                else {
+				                    if ($num_results == 0) {
+				                        echo "<font color='blue'>There are no comments for this event at the time!</font><br><br>";
+				                    }
+				                    else {
+				                        for ($i=0; $i < $num_results; $i++) {
+				                            $row = mysql_fetch_array($result);
+				                            echo "
+				                                <form action='itemProfile.php?itemId=$itemId' method='post'>
+				                                    <table cellpadding ='5' width='80%'>
+				                                        <tr>
+				                                            <td style='font-weight:bold'>On ".date('d.m.o', strtotime($row['Date']))." by <a href='profile.php?nick=".$row['Creator']."' class='nav'>".$row['Creator']."</a>:"."</td>
+				                                        </tr>
+				                                        <tr>
+				                                            <td colspan='2' style='text-align:justify;'>".$row['Content']."</td>
+				                                        </tr>
+				                                    </table>
+				                                    <button name='DeleteComment' type='submit' value='".$row['CommentId']."'>Delete Comment</button><br>
+				                                </form>
+				                            ";  
+				                        }
+				                    }
+				                    echo "
+				                        <br><br>
+				                        Enter a comment, if you like!<br><br>
+				                        <form action='itemProfile.php?itemId=$itemId' method='post'>
+				                        <textarea name='Content' cols='30' rows='5'></textarea>
+				                        <br>
+				                        <input type='submit' name='formaction' value='Submit'>
+				                        <input type='reset' value='Reset'><br><br>
+				                    </form>
+				                    ";
+				                }
+				            }
+				        }
 					
 					// delete, report, watchlist button, checks rights
 					if(isset($_SESSION["nick"])) {
