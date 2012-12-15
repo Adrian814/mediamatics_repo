@@ -168,7 +168,7 @@ session_start();
 						    for ($i=0; $i < $num_results1; $i++) {
 						        $row1 = mysql_fetch_array($result1);
 						        $ItemId = $row1['ItemId'];
-								$query2 = "SELECT * FROM `Events` WHERE `ItemId` = ".$ItemId." ORDER BY `Date` DESC";
+								$query2 = "SELECT * FROM `Items` WHERE `ItemId` = ".$ItemId." ORDER BY `Date` DESC";
 								$result2 = mysql_query($query2);
 								$row2 = mysql_fetch_array($result2);
 							    echo "
