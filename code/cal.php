@@ -7,4 +7,5 @@
 	$row = mysql_fetch_array($result2);
 	$quote = $row['Text'];
 	echo $quote;
+	echo 'Test';
 ?>
