@@ -23,11 +23,6 @@
 		    <div id="body">
 		        <div id="content"> 
 			        <?php
-						// Nacheinander
-					    $url = $_SERVER['HTTP_HOST'];
-					    $url .= $_SERVER['REQUEST_URI']; // $url enthält jetzt die komplette URL
-						echo $url;
-			
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
 	
@@ -108,7 +103,7 @@
 										  name=Facebook%20Dialogs&
 										  caption=Reference%20Documentation&
 										  description=Using%20Dialogs%20to%20interact%20with%20users.&
-										  redirect_uri='".$url."'>Click here!</a>';</td>
+										  redirect_uri='".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."'>Click here!</a>';</td>
 				                    </tr>
 				                </table>";
 				        }
