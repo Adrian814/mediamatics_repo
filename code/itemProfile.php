@@ -103,7 +103,7 @@
 										  name=Facebook%20Dialogs&
 										  caption=Reference%20Documentation&
 										  description=Using%20Dialogs%20to%20interact%20with%20users.&
-										  redirect_uri='".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."'>Click here!</a>';</td>
+										  redirect_uri='".$_SERVER['REQUEST_URI']."'>Click here!</a>';</td>
 				                    </tr>
 				                </table>";
 				        }
