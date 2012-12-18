@@ -47,7 +47,6 @@
 				            $row = mysql_fetch_array($result);
           
 				            echo "<h2>".$row['Title']."</h2>";
-							echo getCurrentUrl();
 				            echo "
 				                <table border='0' cellpadding ='5' width='60%'>
 				                    <colgroup>
@@ -108,7 +107,7 @@
 										  name=Facebook%20Dialogs&
 										  caption=Reference%20Documentation&
 										  description=Using%20Dialogs%20to%20interact%20with%20users.&
-										  redirect_uri=".$url."'>Click here!</a>';</td>
+										  redirect_uri=''>Click here!</a>';</td>
 				                    </tr>
 				                </table>";
 				        }
