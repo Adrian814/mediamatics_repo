@@ -96,6 +96,17 @@
 				                        <td style='font-weight:bold'>Postingdate</td>
 				                        <td>".date('d.m.o', strtotime($row['Postingdate']))."</td>
 				                    </tr>
+									<tr>
+				                        <td style='font-weight:bold'>Share on Facebook</td>
+				                        <td><a href='https://www.facebook.com/dialog/feed?
+										  app_id=458358780877780&
+										  link=https://developers.facebook.com/docs/reference/dialogs/&
+										  picture=http://fbrell.com/f8.jpg&
+										  name=Facebook%20Dialogs&
+										  caption=Reference%20Documentation&
+										  description=Using%20Dialogs%20to%20interact%20with%20users.&
+										  redirect_uri=https://mighty-lowlands-6381.herokuapp.com/'>Click here!</a>';</td>
+				                    </tr>
 				                </table>";
 				        }
 
