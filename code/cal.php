@@ -14,7 +14,7 @@
 <script language="javascript"type="text/javascript">function FG_4ccb04fb46c30_loadScript(){var fgScriptUrl='http://donate.firstgiving.com/dpa/static/js/site/fg_consumer_donation_opener.min.js';var script=document.createElement("script");script.type="text/javascript";if(script.readyState){script.onreadystatechange=function(){if(script.readyState=="loaded"||script.readyState=="complete"){script.onreadystatechange=null}}}else{script.onload=function(){}}script.src=fgScriptUrl;document.body.appendChild(script)}FG_4ccb04fb46c30_loadScript();</script></script> 
 
 <!-- Basic information about this charity. You may remove this DIV if you do not need it displayed -->
-<div style="width: 200px;"><div id="fgOrganizationName"><strong>INTERNATIONAL RESCUE COMMITTEE INC</strong></div>NEW YORK10168<br /><strong>EIN:</strong>135660870</div>
+<div style="width: 200px;"><div id="fgOrganizationName"><strong>EMERGENCY DONATION: INTERNATIONAL RESCUE COMMITTEE INC</strong></div>
 <!-- Donation Button block -->
 <div id="fg_donation-button-block">
 <!-- The Donation Button. You can restyle this to fit with your site design by removing the inline style elements. -->
