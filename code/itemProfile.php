@@ -105,7 +105,7 @@
 										  name=Helping%20Hands&
 										  caption=Item&
 										  description=We%20need%20you!&
-										  redirect_uri=".$url."'> <img src='http://www.svm-basketball.de/images/share_facebook.png'/></a></td>
+										  redirect_uri=".$url."'><img src='http://www.svm-basketball.de/images/share_facebook.png'/></a></td>
 				                    </tr>
 				                </table>";
 				        }
