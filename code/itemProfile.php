@@ -101,7 +101,7 @@
 				                        <td><a href='https://www.facebook.com/dialog/feed?
 										  app_id=458358780877780&
 										  link=".$url."&
-										  picture=http://fbrell.com/f8.jpg&
+										  picture=http://c95711.r11.cf3.rackcdn.com/Illustration_symbol_hands_in_teamwork_2.jpg&
 										  name=Facebook%20Dialogs&
 										  caption=Reference%20Documentation&
 										  description=Using%20Dialogs%20to%20interact%20with%20users.&
