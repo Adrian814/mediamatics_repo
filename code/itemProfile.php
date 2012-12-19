@@ -105,7 +105,7 @@
 										  name=Helping%20Hands&
 										  caption=Item&
 										  description=We%20need%20you!&
-										  redirect_uri=".$url."'>Test</a></td>
+										  redirect_uri=https://mighty-lowlands-6381.herokuapp.com/'><img src='http://sketchia.com/facebook_share_bttn.jpg'/></a></td>
 				                    </tr>
 				                </table>";
 				        }
