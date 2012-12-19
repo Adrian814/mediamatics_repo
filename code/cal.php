@@ -17,7 +17,7 @@
 		<!-- Donation Button block -->
 		<div id='fg_donation-button-block'>
 		<!-- The Donation Button. You can restyle this to fit with your site design by removing the inline style elements. -->
-		<a href='javascript:void(0)' id='b7e806c8-edd0-11df-ab8c-4061860da51d' class='fg-donation-button-4ccb04fb46c30' onclick='FG_DONATE_BUTTON.openDonationWindow(this, 'https://donate.firstgiving.com'); return false;' style='text-indent: -999999px; background: url(http://donate.firstgiving.com/dpa/static/img/consumer_donation_button.png) no-repeat; width: 202px; height: 62px; display: block; pointer: cursor; outline: 0;'>Donate Now</a>
+		<a href='javascript:void(0)' id='b7e806c8-edd0-11df-ab8c-4061860da51d' class='fg-donation-button-4ccb04fb46c30' onclick='FG_DONATE_BUTTON.openDonationWindow(this, https://donate.firstgiving.com)'; return false;' style='text-indent: -999999px; background: url(http://donate.firstgiving.com/dpa/static/img/consumer_donation_button.png) no-repeat; width: 202px; height: 62px; display: block; pointer: cursor; outline: 0;'>Donate Now</a>
 		<!-- Get this FirstGiving Donation Button block. You may remove this if it does not fit with your design. -->
 		<div id='fg_get-this-action' style='width: 200px; margin-top: 5px;'>
 		<a href='javascript:void(0)' style='text-decoration: none;'>
