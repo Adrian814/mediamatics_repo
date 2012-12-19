@@ -25,6 +25,8 @@
 			        <?php
 			        	$ItemId = $_GET['ItemId'];
 			  			$user->getDB();
+			
+						$url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	
 						//Admin: delete comments 
 						if (isset($_SESSION['nick'])) {
@@ -98,12 +100,12 @@
 				                        <td style='font-weight:bold'>Share on Facebook</td>
 				                        <td><a href='https://www.facebook.com/dialog/feed?
 										  app_id=458358780877780&
-										  link=".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."&
+										  link=".$url."&
 										  picture=http://c95711.r11.cf3.rackcdn.com/Illustration_symbol_hands_in_teamwork_2.jpg&
 										  name=Helping%20Hands&
 										  caption=Item&
 										  description=We%20need%20you!&
-										  redirect_uri=https://mighty-lowlands-6381.herokuapp.com/'>Click here!</a></td>
+										  redirect_uri=".$url."'> <img src='http://www.svm-basketball.de/images/share_facebook.png'/></a></td>
 				                    </tr>
 				                </table>";
 				        }
