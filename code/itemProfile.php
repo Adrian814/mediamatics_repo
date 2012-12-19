@@ -102,9 +102,9 @@
 										  app_id=458358780877780&
 										  link=".$url."&
 										  picture=http://c95711.r11.cf3.rackcdn.com/Illustration_symbol_hands_in_teamwork_2.jpg&
-										  name=Facebook%20Dialogs&
-										  caption=Reference%20Documentation&
-										  description=Using%20Dialogs%20to%20interact%20with%20users.&
+										  name=Helping%20Hands&
+										  caption=Item&
+										  description=We%20need%20you!&
 										  redirect_uri=https://mighty-lowlands-6381.herokuapp.com/'/>Test</a></td>
 				                    </tr>
 				                </table>";
