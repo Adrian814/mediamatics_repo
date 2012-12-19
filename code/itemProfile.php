@@ -99,7 +99,7 @@
 				                        <td><a href='https://www.facebook.com/dialog/feed?
 										  app_id=458358780877780&
 										  link=".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."&
-										  picture=http://fbrell.com/f8.jpg&
+										  picture=http://c95711.r11.cf3.rackcdn.com/Illustration_symbol_hands_in_teamwork_2.jpg&
 										  name=Helping%20Hands&
 										  caption=Item&
 										  description=We%20need%20you!&
