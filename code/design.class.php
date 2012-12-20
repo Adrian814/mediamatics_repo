@@ -43,7 +43,7 @@ class designclass {
         echo '</div>';
         echo '<div id="' . $nav . '">';
 
-        echo '<a href="index.php" class="' . $nav_class . '">Items</a>';
+        echo '<a href="index.php" class="' . $nav_class . '">Items   </a>';
 		echo '    ';
         if (isset($_SESSION["nick"])) {
             echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>';
@@ -63,7 +63,7 @@ class designclass {
 		echo '    ';
 		echo '<a href="help.php" class="' . $nav_class . '">Help</a>';
 		echo '    ';
-		echo '<a href="agb.php" class="' . $nav_class . '">AGV</a>';
+		echo '<a href="agb.php" class="' . $nav_class . '">AGB</a>';
 		echo '    ';
 		echo '<a href="about.php" class="' . $nav_class . '">About</a>';
         echo '</div>';
