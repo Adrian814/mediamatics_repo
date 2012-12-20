@@ -1,10 +1,4 @@
 <?php
-/**
- * The class is responsible for the design of the website. 
- *
- * @author Adrian Siuda, Tobias Sennhauser
- * created on: 3.11.2009
- */
 class designclass {
 
     /**
@@ -35,7 +29,7 @@ class designclass {
         echo '<div id="' . $navigation . '">';
         echo '<div id="' . $logo . '">';
         echo '<a href="index.php">
-                <img src="pictures/BlackFlagSymbol4.png" alt="Black Flag" style="border-style:none">
+                <img src="pictures/Logo.png" alt="Logo" style="border-style:none">
               </a>';
         echo '</div>';
         echo '<div id="' . $title . '">';
@@ -82,12 +76,6 @@ class designclass {
         }
 
         echo '</div>'; 
-
-
-/*
-        
-        echo '<a href="about.php" class="' . $nav_class . '">About</a>'; */
-       // echo '</div>';
         echo '</div>';
 
     }
