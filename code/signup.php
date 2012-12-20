@@ -10,7 +10,7 @@ include "user.class.php";
         include "design.class.php";
 
         $design = new designclass();
-        $design->createHeader("Demo Kalender > Sign Up", "css/web_tech.css");
+        $design->createHeader("Helping Hands > Sign Up", "css/web_tech.css");
 
         ?>
         <script type="text/javascript" src="js/check.js"> </script>
@@ -136,7 +136,9 @@ include "user.class.php";
                     ?>
                 </div>
                 <div id="calendar">
-                    <?php //include "cal.php"; ?>
+                    <?php
+						include "cal.php"; 
+					?>
                 </div>
             </div>
         </div>
