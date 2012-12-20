@@ -60,6 +60,7 @@ class designclass {
 		echo '<a href="links.php" class="' . $nav_class . '">Links</a>';
 		echo '    ';
 		echo '<a href="http://www.cafepress.com/" class="' . $nav_class . '">Shop</a>';
+		echo '    ';
 		echo '<a href="help.php" class="' . $nav_class . '">Help</a>';
 		echo '    ';
 		echo '<a href="agb.php" class="' . $nav_class . '">AGV</a>';
