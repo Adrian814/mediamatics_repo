@@ -1,11 +1,4 @@
 <?php
-/**
- * Description of Calendar
- *
- * @author kulturfenster
- *
- * created on 15.10.2009
- */
 class Calendar {
 
     function Calendar()

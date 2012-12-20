@@ -53,7 +53,7 @@
                       $_POST["view"],
                       $_POST["hobbies"]);
        }
-       
+    
      }
 
 ?>
@@ -65,19 +65,15 @@
             include "design.class.php";
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender > User", "css/web_tech.css");
+            $design->createHeader("Helping Hands > User", "css/web_tech.css");
         ?>
     </head>
     <body>
         <div id="all">
-
             <?php
-
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
-
             ?>
             <div id="content">
-      
                 <h2>Create New Account</h2>
                 <form action="user.php" method="post">
                     <input name="first" type="text"> First Name* <br>
@@ -94,10 +90,8 @@
                     <input name="submit" type="submit" value="Sign Up">
                     <input name="reset" type="reset" value="Reset">
                     <p>* mandatory!</p>
-
                 </form>
                  <?php
-
                     if(isset($user_exists))
                     {
                         if($user_exists) {
@@ -107,7 +101,9 @@
                 ?>
             </div>
             <div id="calendar">
-                Hier kommt der Kalender hin..
+                <?php 
+					include 'cal.php';
+				?>
             </div>
         </div>
     </body>

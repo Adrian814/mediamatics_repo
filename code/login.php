@@ -5,50 +5,39 @@
        
     $user = new userclass();
 
-
     if(isset($_POST["submit"])) {
-
-       $db = $user->getDB();
-
-       
+       $db = $user->getDB();   
        $login = $user->login($_POST["nick"], $_POST["pass"]);
-
        if(isset($_POST["cookie"]))
        {
             $user->setCookie($_POST["nick"]);
        }
      }
-
 ?>
 
 <html>
     <head>
         <?php
-            //include "ini_set.inc.php";
-            include "design.class.php";
+//            include "ini_set.inc.php";
+              include "design.class.php";
 //            include "user.class.php";
 //
 //            $user = new userclass();
 //            $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender", "css/web_tech.css");
+            $design->createHeader("Helping Hands > Login", "css/web_tech.css");
         ?>
     </head>
     <body onload="document.login.nick.focus();">
         <div id="all">
-
             <?php
-
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
-
             ?>
             <div id="body">
                 <div id="content">
                     <!-- CONTENT -->
-
                 <?php
-
                     if (isset($login))
                     {
                         if($login)
@@ -66,13 +55,13 @@
                     }
                     else
                         $user->createLogin();
-
                 ?>
-                
             </div>
             <!-- END-CONTENT -->
                 <div id="calendar">
-                    <?php //include "cal.php"; ?>
+                    <?php
+						include "cal.php"; 
+					?>
                 </div>
             </div>
         </div>

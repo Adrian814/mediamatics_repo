@@ -11,19 +11,14 @@
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender", "css/web_tech.css");
-
-
+            $design->createHeader("Helping Hands > Login Required", "css/web_tech.css");
         ?>
 
     </head>
     <body>
         <div id="all">
-
             <?php
-
                 $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
-
             ?>
             <div id="body">
                 <div id="content">
@@ -34,9 +29,7 @@
                     </div>
                 <div id="calendar">
                     <?php
-
                         include "cal.php";
-
                     ?>
                 </div>
             </div>

@@ -6,10 +6,10 @@
 	$result2 = mysql_query("SELECT * FROM `Quotes` WHERE QuoteId = '".$randomId."';");
 	$row = mysql_fetch_array($result2);
 	$quote = $row['Text'];
-	echo $quote;
+	echo "<b>".$quote."</b>";
 ?>
 <br><br>
-<a href='index.php'><img src='http://unitedwaycalvert.org/images/banner160x370-Side-Banner-2.jpg' alt='banner' style='border-style:none'></a>
+<a href='http://unitedwaycalvert.org/'><img src='http://unitedwaycalvert.org/images/banner160x370-Side-Banner-2.jpg' alt='banner' style='border-style:none'></a>
 <br><br>
 <script language="javascript"type="text/javascript">function FG_4ccb04fb46c30_loadScript(){var fgScriptUrl='http://donate.firstgiving.com/dpa/static/js/site/fg_consumer_donation_opener.min.js';var script=document.createElement("script");script.type="text/javascript";if(script.readyState){script.onreadystatechange=function(){if(script.readyState=="loaded"||script.readyState=="complete"){script.onreadystatechange=null}}}else{script.onload=function(){}}script.src=fgScriptUrl;document.body.appendChild(script)}FG_4ccb04fb46c30_loadScript();</script></script> 
 
