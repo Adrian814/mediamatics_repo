@@ -43,20 +43,20 @@ class designclass {
         echo '</div>';
         echo '<div id="' . $nav . '">';
 
-        echo '<a href="index.php" class="' . $nav_class . '">Items</a>   ';
+        echo '<a href="index.php" class="' . $nav_class . '">Items</a>      ';
         if (isset($_SESSION["nick"])) {
-            echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>   ';
-			echo '<a href="watchlist.php" class="' . $nav_class . '">My Watchlist</a>   ';
+            echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>      ';
+			echo '<a href="watchlist.php" class="' . $nav_class . '">My Watchlist</a>      ';
             if ($_SESSION["nick"] == "Admin") {
-                echo '<a href="adminuser.php" class="' . $nav_class . '">User</a> ';
+                echo '<a href="adminuser.php" class="' . $nav_class . '">User</a>      ';
             }
         }
-		echo '<a href="informations.php" class="' . $nav_class . '">Informations</a>   ';
-		echo '<a href="links.php" class="' . $nav_class . '">Links</a>   ';
-		echo '<a href="http://www.cafepress.com/" class="' . $nav_class . '">Shop</a>   ';
-		echo '<a href="help.php" class="' . $nav_class . '">Help</a>   ';
-		echo '<a href="agb.php" class="' . $nav_class . '">AGV</a>   ';
-		echo '<a href="about.php" class="' . $nav_class . '">About</a>';
+		echo '<a href="informations.php" class="' . $nav_class . '">Informations</a>      ';
+		echo '<a href="links.php" class="' . $nav_class . '">Links</a>      ';
+		echo '<a href="http://www.cafepress.com/" class="' . $nav_class . '">Shop</a>      ';
+		echo '<a href="help.php" class="' . $nav_class . '">Help</a>      ';
+		echo '<a href="agb.php" class="' . $nav_class . '">AGV</a>      ';
+		echo '<a href="about.php" class="' . $nav_class . '">About</a>      ';
         echo '</div>';
 
         echo '<!-- Login -->';
