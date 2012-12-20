@@ -10,85 +10,86 @@ include "user.class.php";
         include "design.class.php";
 
         $design = new designclass();
-        $design->createHeader("Helping Hands > Sign Up", "css/web_tech.css");
+        $design->createHeader("Demo Kalender > Sign Up", "css/web_tech.css");
 
         ?>
         <script type="text/javascript" src="js/check.js"> </script>
     </head>
     <body onload="document.signup.first.focus();">
         <div id="all">
+
             <?php
-   	         $user = new userclass();
-	            $user->getDB();
-	            $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
+            $user = new userclass();
+            $user->getDB();
+            $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
 
-	            if(isset($_POST["submit"])) {
+            if(isset($_POST["submit"])) {
 
 
-	            // captcha
-	                if ($_SESSION["captcha_spam"] != $_POST["sicherheitscode"]) {
-	                    $msg = "Captcha wasn't correct!";
-	                }
-	                // check mandatory fields
-	                else if (!$_POST['first'] || !$_POST['last'] || !$_POST['nick'] ||
-	                        !$_POST["pass1"] || !$_POST["pass2"] || !$_POST["email"]) {
-	                        $msg = 'You did not complete all of the required fields!';
-	                    }
-	                    else if ($_POST["pass1"] != $_POST["pass2"]) {
-	                            $msg = 'Passwords do not match!';
-	                        }
-	                        else if($user->checkUser($_POST["nick"])) {
-	                                $msg = "Username '" . $_POST["nick"] . "' already taken.";
-	                            }
-	                            else { // no input error
+            // captcha
+                if ($_SESSION["captcha_spam"] != $_POST["sicherheitscode"]) {
+                    $msg = "Captcha wasn't correct!";
+                }
+                // check mandatory fields
+                else if (!$_POST['first'] || !$_POST['last'] || !$_POST['nick'] ||
+                        !$_POST["pass1"] || !$_POST["pass2"] || !$_POST["email"]) {
+                        $msg = 'You did not complete all of the required fields!';
+                    }
+                    else if ($_POST["pass1"] != $_POST["pass2"]) {
+                            $msg = 'Passwords do not match!';
+                        }
+                        else if($user->checkUser($_POST["nick"])) {
+                                $msg = "Username '" . $_POST["nick"] . "' already taken.";
+                            }
+                            else { // no input error
 
-	                            // encrypt the password and add slashes if needed
-	                                $_POST['pass1'] = md5($_POST['pass1']);
-	                                if (!get_magic_quotes_gpc()) {
-	                                    $_POST['pass1'] = addslashes($_POST['pass1']);
-	                                    $_POST['nick'] = addslashes($_POST['nick']);
-	                                }
+                            // encrypt the password and add slashes if needed
+                                $_POST['pass1'] = md5($_POST['pass1']);
+                                if (!get_magic_quotes_gpc()) {
+                                    $_POST['pass1'] = addslashes($_POST['pass1']);
+                                    $_POST['nick'] = addslashes($_POST['nick']);
+                                }
 
-	                                date_default_timezone_set('Europe/Paris');
+                                date_default_timezone_set('Europe/Paris');
 
-	                                // profile picture
-	                                if($_FILES["userfile"]["error"] != 4) {
-	                                    // debug
-	                                    //echo print_r($_FILES["userfile"]) . "<p>";
+                                // profile picture
+                                if($_FILES["userfile"]["error"] != 4) {
+                                    // debug
+                                    //echo print_r($_FILES["userfile"]) . "<p>";
 
-	                                    $name = $_FILES["userfile"]["name"];
-	                                    $temp_name = $_FILES["userfile"]["tmp_name"];
-	                                    $path = "pictures/profiles/";
-	                                    $final_name = substr($user->createPassword(), 0, 3) . "_".$name;
+                                    $name = $_FILES["userfile"]["name"];
+                                    $temp_name = $_FILES["userfile"]["tmp_name"];
+                                    $path = "pictures/profiles/";
+                                    $final_name = substr($user->createPassword(), 0, 3) . "_".$name;
 
-	                                    move_uploaded_file($temp_name, $path.$final_name);
+                                    move_uploaded_file($temp_name, $path.$final_name);
                                    
-	                                    //echo "error: " . $_FILES["userfile"]["error"] . "<p>";
+                                    //echo "error: " . $_FILES["userfile"]["error"] . "<p>";
                                    
-	                                }
-	                                else // default picture
-	                                    $final_name = "default.GIF";
+                                }
+                                else // default picture
+                                    $final_name = "default.GIF";
 
-	                                // adds the user to the db
-	                                $user->addUser($_POST["first"],
-	                                    $_POST["last"],
-	                                    $_POST["nick"],
-	                                    $_POST["pass1"],
-	                                    $_POST["email"],
-	                                    date("Y-m-d"),
-	                                    $final_name,
-	                                    $_POST["view"],
-	                                    $_POST["hobbies"]);
+                                // adds the user to the db
+                                $user->addUser($_POST["first"],
+                                    $_POST["last"],
+                                    $_POST["nick"],
+                                    $_POST["pass1"],
+                                    $_POST["email"],
+                                    date("Y-m-d"),
+                                    $final_name,
+                                    $_POST["view"],
+                                    $_POST["hobbies"]);
 
-	                                $_SESSION["nick"] = $_POST["nick"];
+                                $_SESSION["nick"] = $_POST["nick"];
 
-	                                echo "<p> Thanks for signing up, " . $_SESSION["nick"] . "!</p>";
-	                                echo "<p> Redirection in a few seconds... </p>";
-	                                echo "<meta http-equiv='refresh' content='3; url=index.php'>";
-	                                exit;
-	                            }
+                                echo "<p> Thanks for signing up, " . $_SESSION["nick"] . "!</p>";
+                                echo "<p> Redirection in a few seconds... </p>";
+                                echo "<meta http-equiv='refresh' content='3; url=index.php'>";
+                                exit;
+                            }
 
-	            }
+            }
             ?>
             <div id="body">
                 <div id="content">
@@ -135,9 +136,7 @@ include "user.class.php";
                     ?>
                 </div>
                 <div id="calendar">
-                    <?php 
-						include "cal.php";
-					?>
+                    <?php //include "cal.php"; ?>
                 </div>
             </div>
         </div>
