@@ -11,17 +11,19 @@ include "user.class.php";
 
         $design = new designclass();
         $design->createHeader("Helping Hands > Sign Up", "css/web_tech.css");
+
         ?>
         <script type="text/javascript" src="js/check.js"> </script>
     </head>
     <body onload="document.signup.first.focus();">
         <div id="all">
             <?php
- 	            $user = new userclass();
+   	         $user = new userclass();
 	            $user->getDB();
 	            $design->createNavigation("navigation", "navigation_logo", "navigation_title", "navigation_nav", "nav", "navigation_login");
 
 	            if(isset($_POST["submit"])) {
+
 
 	            // captcha
 	                if ($_SESSION["captcha_spam"] != $_POST["sicherheitscode"]) {
@@ -85,54 +87,56 @@ include "user.class.php";
 	                                echo "<meta http-equiv='refresh' content='3; url=index.php'>";
 	                                exit;
 	                            }
+
 	            }
-	            ?>
-	            <div id="body">
-	                <div id="content">
-	                    <h2>Create New Account</h2>
-	                    <form enctype="multipart/form-data" name="signup" action="signup.php" method="post">
-	                        <input name="first" type="text"> First Name* <br>
-	                        <input name="last" type="text"> Last Name* <br>
-	                        <input name="view" type="text"> Political View <br>
-	                        <input name="hobbies" type="text"> Hobbies
+            ?>
+            <div id="body">
+                <div id="content">
+
+                    <h2>Create New Account</h2>
+                    <form enctype="multipart/form-data" name="signup" action="signup.php" method="post">
+                        <input name="first" type="text"> First Name* <br>
+                        <input name="last" type="text"> Last Name* <br>
+                        <input name="view" type="text"> Political View <br>
+                        <input name="hobbies" type="text"> Hobbies
                         
-	                        <!-- file upload -->
-	                        <p>
-	                            <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
-	                            Choose a profile picture (max size is 3MB):
-	                            <p>
-	                                <input name="userfile" type="file" />
-	                            </p>
-	                        </p>
-	                        <p>
-	                            <input name="nick" type="text"> Nickname* <br>
-	                            <input name="email" onblur="javascript:validateForm();" type="text"> eMail* <br>
-	                            <input name="pass1"  type="password"> Password* <br>
-	                            <input name="pass2" type="password"> Re-enter Password*
-	                        </p>
+                        <!-- file upload -->
+                        <p>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+                            Choose a profile picture (max size is 3MB):
+                            <p>
+                                <input name="userfile" type="file" />
+                            </p>
+                        </p>
+                        <p>
+                            <input name="nick" type="text"> Nickname* <br>
+                            <input name="email" onblur="javascript:validateForm();" type="text"> eMail* <br>
+                            <input name="pass1"  type="password"> Password* <br>
+                            <input name="pass2" type="password"> Re-enter Password*
+                        </p>
 
-	                        <!-- captcha -->
-	                        <img alt="captcha" src="printCAPTCHA.php" border="0" title="Sicherheitscode"> Case Sensitive!<p>
-	                            <input type="text" name="sicherheitscode" size="5"> Security Code
-	                        </p>
+                        <!-- captcha -->
+                        <img alt="captcha" src="printCAPTCHA.php" border="0" title="Sicherheitscode"> Case Sensitive!<p>
+                            <input type="text" name="sicherheitscode" size="5"> Security Code
+                        </p>
 
-	                        <p>
-	                            <input name="submit" type="submit" value="Sign Up">
-	                            <input name="reset" type="reset" value="Reset">
-	                        </p>
-	                        <p>* mandatory!</p>
+                        <p>
+                            <input name="submit" type="submit" value="Sign Up">
+                            <input name="reset" type="reset" value="Reset">
+                        </p>
+                        <p>* mandatory!</p>
 
-	                    </form>
-	                    <?php
+                    </form>
+                    <?php
 
-	                    if(isset($msg)) {
-	                        echo "<span id='error'>$msg</span>";
-	                    }
+                    if(isset($msg)) {
+                        echo "<span id='error'>$msg</span>";
+                    }
                     ?>
                 </div>
                 <div id="calendar">
-                    <?php
-						include 'cal.php'; 
+                    <?php 
+						include "cal.php";
 					?>
                 </div>
             </div>
