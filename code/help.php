@@ -31,6 +31,7 @@
 			    if(!$mysql) {
 			        echo 'Cannot select database.';
 			        exit;
+				}
 	
                 $design->createNavigation(  "navigation",
                                             "navigation_logo",
