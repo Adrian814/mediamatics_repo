@@ -11,7 +11,7 @@
         $user->checkCookie();
 
         $design = new designclass();
-        $design->createHeader("Helping Hands > User Profile", "css/web_tech.css");
+        $design->createHeader("Helping Hands > User > Profile", "css/web_tech.css");
         ?>      
     </head>
     <body>
@@ -26,7 +26,7 @@
                             echo "<meta http-equiv='refresh' content='0; url=index.php'>";
                         }
                         else
-                            $user->createSettings($_GET["nick"], false);
+                            $user->createSettings($_GET["Nick"], false);
                     if(isset($msg)) {
                         echo "<span id='error'>";
                         echo $msg;
@@ -35,7 +35,9 @@
                     ?>
                 </div>
                 <div id="calendar">
-                    <?php //include "cal.php"; ?>
+                    <?php 
+						include 'cal.php'; 
+					?>
                 </div>
             </div>
         </div>
