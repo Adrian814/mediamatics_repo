@@ -52,7 +52,7 @@ class designclass {
 			echo '/';
             if ($_SESSION["nick"] == "Admin") {
                 echo '<a href="adminuser.php" class="' . $nav_class . '">User</a>';
-				echo '    ';
+				echo '/';
             }
         }
 		echo '<a href="informations.php" class="' . $nav_class . '">Informations</a>';
