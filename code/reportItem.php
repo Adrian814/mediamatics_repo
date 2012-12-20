@@ -13,7 +13,7 @@ session_start();
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Item reported", "css/web_tech.css");        
+            $design->createHeader("Helping Hands > Item reported", "css/web_tech.css");        
         ?>
 
     </head>
@@ -34,6 +34,7 @@ session_start();
                 </div>
                 <div id="calendar">
                     <?php
+						include 'cal.php';
                     ?>
                 </div>
             </div>

@@ -99,8 +99,7 @@
                 </div>
                 <div id="calendar">
                     <?php
-                        //include "cal.php";
-                        //include "Calendar.php";
+                        include "cal.php";
                     ?>
                 </div>
             </div>

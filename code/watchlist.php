@@ -13,7 +13,7 @@ session_start();
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Helping Hands", "css/web_tech.css");
+            $design->createHeader("Helping Hands > Watchlist", "css/web_tech.css");
 
             if(isset($_POST["createItem_form"]))
             {
@@ -56,109 +56,6 @@ session_start();
 					    }
 						
 						echo "<br><br>";
-						
-					    // prepares the query for the order of the list
-					    if (isset($_GET['Order'])) {
-					        if (($_GET['Order']) == 'Postingdate') {
-					            $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
-					            $postingdateSelected = 'selected';
-								$Order = 'Postingdate';
-					        }
-					        elseif (($_GET['Order']) == 'Title') {
-					        	$query = "SELECT * FROM `Items` ORDER BY `Title` ASC";
-					        	$titleSelected = 'selected';
-								$Order = 'Title';
-					        }
-					        elseif (($_GET['Order']) == 'Category') {
-					        	$query = "SELECT * FROM `Items`ORDER BY `Category` ASC";
-					        	$categorySelected = 'selected';
-								$Order = 'Category';
-					        }
-					    }
-					    else {
-					        $query = "SELECT * FROM `Items` ORDER BY `Postingdate` DESC";
-					        $postingdateSelected = 'selected';
-							$Order = 'Postingdate';
-					    }
-					
-					    // page navigation
-					    if (!isset($_REQUEST['Total'])) {
-					        $result = mysql_query($query);
-					        $Total = mysql_num_rows($result);
-					        unset($result);
-					    }
-					    else
-					        $Total = $_REQUEST['Total'];
-
-					    if (!isset($_REQUEST['Page']))
-					        $Page = 1;
-					    else
-					        $Page = $_REQUEST['Page'];
-					    if ($Page > $Total)
-					        $Page = $Total;
-
-					    $PerPage = 7;
-					    $LinkNumber = 3;
-					    $PageNumber = ceil($Total/$PerPage);
-					    if ($LinkNumber % 2 == 0)
-					        $LinkNumber++;
-					    $NumericLinks = ($LinkNumber - 1) / 2;
-					    $url = $_SERVER['PHP_SELF'] . "?Order=$Order";
-
-					    $query .= " limit ". ($Page * $PerPage - $PerPage) .", ".$PerPage;
-					    $result = mysql_query($query);
-
-					    $SkipCharactersFront = '';
-					    $SkipCharactersBack = '';
-					    $BeginningLink = '';
-					    $EndLink = '';
-					    $BackLink = '';
-					    $ContinueLink = '';
-					    $ViewableLinks = '';
-
-					    if ($PageNumber > 1) {
-					        $Nr = $Page - $NumericLinks;
-					        $Display = 0;
-					        while ($Nr <= $PageNumber) {
-					            if ($Nr < 1) {
-					                $Nr++;
-					                continue;
-					            }
-					            elseif ($Nr > $Page + $NumericLinks)
-					                break;
-					        if ($Nr == $Page)
-					            $ViewableLinks .= "<font style='font-weight:bold'> $Nr </font>";
-					        else
-					            $ViewableLinks .= '<a  class="adi" href="'.$url.'&Page='.$Nr.'&Total='.$Total.'">'.$Nr.'</a>';
-					        $Nr++;
-					        $Display++;
-					        }
-					    }
-
-					    if ($Page > 1) {
-					        $BeginningLink = '<a class="adi" href="'.$url.'&Page=1&Total='.$Total.'">Beginning </a>' . ' ';
-					        if ($Page - 1 > 1)
-					          $BackLink = ' ' . '<a  class="adi"href="'.$url.'&Page='.($Page - 1).'&Total='.$Total.'">Back </a>';
-					    }
-
-					    if ($Page < $PageNumber) {
-					        $EndLink = ' ' . '<a class="adi" href="'.$url.'&Page='.$PageNumber.'&Total='.$Total.'"> End</a>';
-					        if ($Page + 1 < $PageNumber)
-					        $ContinueLink = '<a class="adi" href="'.$url.'&Page='.($Page+1).'&Total='.$Total.'"> Continue</a>' . ' ';
-					    }
-
-					    if ($Page - $NumericLinks > 1)
-					        $SkipCharactersFront = '... ';
-					    if ($Page + $NumericLinks < $PageNumber)
-					        $SkipCharactersBack = ' ...';
-
-					    $Nav = $BeginningLink;
-					    $Nav .= $BackLink;
-					    $Nav .= $SkipCharactersFront;
-					    $Nav .= $ViewableLinks;
-					    $Nav .= $SkipCharactersBack;
-					    $Nav .= $ContinueLink;
-					    $Nav .= $EndLink;
 					
 					    // generates the list of events
 						$query1 = "SELECT * FROM `Watchlist` WHERE `User` = "."'".$_SESSION["nick"]."'"." ORDER BY `Date` DESC;";
@@ -193,32 +90,12 @@ session_start();
 								 ";
 							}
 						}
-					
-						//select menu for order             
-					    echo "
-						    <table width='100%'>
-							    <td>
-							        <form action='index.php' method='get'>
-							            <label for='Order'>Sort by:</label>
-							                        <select type='submit' name='Order' size='1' OnChange ='submit()'>
-							                            <option $postingdateSelected>Postingdate</option>
-							                            <option $titleSelected>Title</option>
-							                            <option $categorySelected>Category</option>
-							                        </select>
-							        </form>
-							    </td>
-							    <td>
-							        <p align='right'>$Nav<p>
-							    </td>
-						    </table>
-						";
 					} 
     			?>
 	            </div>
 	    		<div id="calendar">
 	    			<?php
-	        			//include "cal.php";
-	            		//include "Calendar.php";
+	        			include "cal.php";	
 	       			?>
 	    		</div>
 	  		</div>
