@@ -43,8 +43,8 @@ class designclass {
         echo '</div>';
         echo '<div id="' . $nav . '">';
 
-        echo '<a href="index.php" class="' . $nav_class . '">Items   </a>';
-		echo '    ';
+        echo '<a href="index.php" class="' . $nav_class . '">Items</a>';
+		echo '/';
         if (isset($_SESSION["nick"])) {
             echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>';
 			echo '    ';
@@ -56,15 +56,15 @@ class designclass {
             }
         }
 		echo '<a href="informations.php" class="' . $nav_class . '">Informations</a>';
-		echo '    ';
+		echo '/';
 		echo '<a href="links.php" class="' . $nav_class . '">Links</a>';
-		echo '    ';
+		echo '/';
 		echo '<a href="http://www.cafepress.com/" class="' . $nav_class . '">Shop</a>';
-		echo '    ';
+		echo '/';
 		echo '<a href="help.php" class="' . $nav_class . '">Help</a>';
-		echo '    ';
+		echo '/';
 		echo '<a href="agb.php" class="' . $nav_class . '">AGB</a>';
-		echo '    ';
+		echo '/';
 		echo '<a href="about.php" class="' . $nav_class . '">About</a>';
         echo '</div>';
 
