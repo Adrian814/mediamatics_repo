@@ -51,6 +51,12 @@ class designclass {
                 echo '<a href="adminuser.php" class="' . $nav_class . '">User</a> ';
             }
         }
+		echo '<a href="informations.php" class="' . $nav_class . '">Informations</a>   ';
+		echo '<a href="links.php" class="' . $nav_class . '">Links</a>   ';
+		echo '<a href="http://www.cafepress.com/" class="' . $nav_class . '">Shop</a>   ';
+		echo '<a href="help.php" class="' . $nav_class . '">Help</a>   ';
+		echo '<a href="agb.php" class="' . $nav_class . '">AGV</a>   ';
+		echo '<a href="about.php" class="' . $nav_class . '">About</a>';
         echo '</div>';
 
         echo '<!-- Login -->';
@@ -66,7 +72,6 @@ class designclass {
             echo '<a href="signup.php" class="' . $nav_class . '">Sign Up!</a> <br>';
         }
 
-        echo '<a href="about.php" class="' . $nav_class . '">About</a>';
         echo '</div>'; 
 
 
