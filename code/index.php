@@ -214,7 +214,7 @@ session_start();
 					    }
 	    			?>
 	            </div>
-	    		<div id="calendar">
+	    		<div id="sidebar">
 	    			<?php
 	        			include 'sidebar.php';
 	       			?>
