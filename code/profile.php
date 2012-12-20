@@ -22,7 +22,7 @@
             <div id="body">
                 <div id="content">
                     <?php
-                        if (!isset($_SESSION["nick"])) {
+                        if (!isset($_SESSION["nick"] OR !isset($_GET["nick"]) {
                             echo "<meta http-equiv='refresh' content='0; url=index.php'>";
                         }
                         else
@@ -36,7 +36,9 @@
                     ?>
                 </div>
                 <div id="calendar">
-                    <?php include "cal.php"; ?>
+                    <?php 
+						include "cal.php"; 
+					?>
                 </div>
             </div>
         </div>
