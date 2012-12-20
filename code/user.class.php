@@ -407,7 +407,7 @@ class userclass {
 
         $pw = $this->createPassword();
         $this->setPassword($user, $pw);
-        $url = "http://diuf-student.unifr.ch/2009/siudaa/project/code/login.php";
+        $url = "http://helpinghands.orchestra.io/login.php";
 
         $body = "<h3>Dear activist </h3>
                 Since you seem to have misplaced your login, here you go: <p>
