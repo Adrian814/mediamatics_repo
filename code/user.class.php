@@ -1,15 +1,4 @@
 <?php
-
-/**
- * This class provides access to user information.
- *
- * @author Adrian Siuda, Tobias Sennhauser
- * created on 2.11.2009
- * last updated: 24.11.2009
- *
- * @TODO: input check in function 'createChangeSettings()'
- *
- */
 class userclass {
 
     function addUser($first, $last, $nick, $pw, $email, $date, $picture, $view, $hobbies)
