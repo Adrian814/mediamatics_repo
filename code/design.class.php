@@ -47,9 +47,9 @@ class designclass {
 		echo '/';
         if (isset($_SESSION["nick"])) {
             echo '<a href="createItem.php" class="' . $nav_class . '">Create New Item</a>';
-			echo '    ';
+			echo '/';
 			echo '<a href="watchlist.php" class="' . $nav_class . '">My Watchlist</a>';
-			echo '    ';
+			echo '/';
             if ($_SESSION["nick"] == "Admin") {
                 echo '<a href="adminuser.php" class="' . $nav_class . '">User</a>';
 				echo '    ';
