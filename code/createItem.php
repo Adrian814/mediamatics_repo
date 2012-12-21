@@ -14,7 +14,6 @@
             $design->createHeader("Helping Hands > Create Item", "css/web_tech.css");
         ?>
     </head>
-
     <body>
         <div id="all">
             <?php

@@ -39,7 +39,7 @@ session_start();
 					        }
 					        if($_SESSION["nick"] == "Admin") {
             
-						//connect to datebase
+						//connect to database
 					    $db = mysql_connect("a.db.shared.orchestra.io", "user_6b0d5c75", "bTh4cEKXeAtx!o") or die(mysql_error());
 					    mysql_select_db("db_6b0d5c75", $db) or die(mysql_error());
 

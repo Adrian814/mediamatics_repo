@@ -21,7 +21,6 @@ session_start();
             }
         ?>
     </head>
-
     <body>
         <div id="all">
             <?php

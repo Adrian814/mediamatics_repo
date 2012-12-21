@@ -11,10 +11,9 @@
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Item Profile", "css/web_tech.css");
+            $design->createHeader("Helping Hands > Item Profile", "css/web_tech.css");
         ?>
     </head>
-
     <body>
         <div id="all">
             <?php

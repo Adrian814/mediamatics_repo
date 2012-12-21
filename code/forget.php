@@ -11,7 +11,7 @@
             $user->checkCookie();
 
             $design = new designclass();
-            $design->createHeader("Demo Kalender > Forget Password", "css/web_tech.css");
+            $design->createHeader("Helping Hands > Forget Password", "css/web_tech.css");
 
             if(isset($_SESSION["email"]))
             {

@@ -15,7 +15,6 @@ session_start();
             $design = new designclass();
             $design->createHeader("Item added to Watchlist", "css/web_tech.css");      
         ?>
-
     </head>
     <body>
         <div id="all">

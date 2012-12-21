@@ -13,7 +13,6 @@
             $design = new designclass();
             $design->createHeader("Helping Hands > Help", "css/web_tech.css");
         ?>
-
     </head>
     <body>
         <div id="all">

@@ -39,7 +39,6 @@
                                             "nav",
                                             //"loginLinks",
                                             "navigation_login");
-
             ?>
             <div id="body">
                 <div id="content">
